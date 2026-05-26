@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+@import url(./score-card.css);
+.blink_me {
+    animation: blinker 1s linear infinite;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 15px;
+    background-color: red;
+    padding: 10px 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  @keyframes blinker {
+    80% {
+      opacity: 0;
+    }
+  }
+
+  /* hide Max bets for premium makt*/
+  .hide-Maxstake{
+    display: none !important;
+  }
+    
+
+@keyframes ice-text-blink {0%, 100% { opacity: 1;} 50% {opacity: 0;}}
+.ice-animated-text {animation: smooth-blink 1s infinite;}

@@ -1,0 +1,322 @@
+body {
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.exp_Value {
+    color: red !important
+}
+
+.pl_Value {
+    color: green !important
+}
+
+.player_book {
+    display: block !important;
+    width: 85% !important;
+    border-radius: 4px;
+    border: 1px solid #f9ab1b;
+    padding: 5px 10px 6px 4px;
+    background-color: #f9ab1b;
+    color: #21394b !important;
+    font-weight: 600 !important
+}
+
+.bottampop {
+    padding-bottom: calc(16% + 10px)
+}
+
+.ngx-datatable {
+    overflow: visible !important
+}
+
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%)
+}
+
+.iocine {
+    padding: 23px 26px;
+    background-color: #be0000;
+    border-radius: 6px 0 0 6px;
+    font-size: 30px;
+    color: #fff
+}
+
+.iocinesu {
+    padding: 15px 21px;
+    background-color: #0b831f;
+    border-radius: 6px 0 0 6px;
+    font-size: 30px;
+    color: #fff
+}
+
+.iocinewrn {
+    padding: 15px 21px;
+    background-color: #ffeb3b;
+    border-radius: 6px 0 0 6px;
+    font-size: 30px;
+    color: #fff
+}
+
+.toast {
+    font-size: 1rem;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important
+}
+
+.msga {
+    font-size: 14px;
+    margin-left: 20px;
+    color: #000;
+    top: 16px
+}
+
+.tosclose {
+    cursor: pointer;
+    float: right;
+    line-height: 1;
+    opacity: .8;
+    font-size: 30px !important;
+    margin-right: 15px;
+    border-left: 1px solid #000;
+    padding: 0 9px !important;
+    text-align: center
+}
+
+ngx-datatable datatable-header {
+    border-radius: 0 !important
+}
+
+.slider .round:before {
+    background-color: #fff !important
+}
+
+.hidechatboat {
+    display: none !important
+}
+
+.modal.all-login-theme-modal .modal-dialog {
+    max-width: 600px;
+    width: 100%;
+    margin: 30px auto
+}
+
+.modal.all-login-theme-modal .modal-content {
+    background: #fff;
+    border-radius: 6px
+}
+
+.modal.all-login-theme-modal .modal-content .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background: 0 0 !important
+}
+
+.modal.all-login-theme-modal .modal-dialog * {
+    font-family: Tahoma, Helvetica, sans-serif
+}
+
+.modal.all-login-theme-modal .modal-dialog button.close {
+    font-size: 20px;
+    color: #000 !important;
+    cursor: pointer;
+    top: 0 !important;
+    right: 0 !important;
+    margin-top: 0 !important;
+    padding: 0
+}
+
+.modal.all-login-theme-modal .modal-dialog button.close span {
+    font-size: 20px !important;
+    font-weight: 700
+}
+
+.modal.all-login-theme-modal .ch-theme li {
+    width: 25%;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .5s ease 0s
+}
+
+.modal.all-login-theme-modal .modal-body {
+    padding: 15px
+}
+
+.modal.all-login-theme-modal h5.modal-title {
+    font-size: 18px;
+    color: #000 !important
+}
+
+@media(max-width:767px) {
+    .modal.all-login-theme-modal .ch-theme li {
+        width: 35%;
+        margin: 6px;
+        padding: 10px
+    }
+
+    .modal.all-login-theme-modal .modal-dialog {
+        max-width: 100% !important;
+        padding: 0 15px
+    }
+}
+
+.skin-1.maincontai.main-body {
+    padding-top: 20px;
+    float: left;
+    width: 100%;
+    display: block
+}
+
+.sidebar-content-wrapper .eventTitle {
+    font-weight: 700;
+    font-size: 18px
+}
+
+.sidebar-content-wrapper {
+    padding-top: 50px;
+    width: 100%;
+    float: left
+}
+
+.sidebar-content-wrapper ul.nav.nav-tabs li a {
+    border: 0;
+    padding: 12px 21px !important;
+    font-size: 18px;
+    color: #000;
+    text-align: center
+}
+
+.sidebar-content-wrapper ul.nav.nav-tabs li.active a {
+    background: #eee !important
+}
+
+.sidebar-content-wrapper .card-box:hover {
+    border: 1px solid #d3d3d3
+}
+
+.sidebar-content-wrapper .card-box {
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid transparent
+}
+
+.sidebar-content-wrapper ul.card-listing li {
+    float: left;
+    width: 18%;
+    margin: 0 1% 1%
+}
+
+.sidebar-content-wrapper ul.nav.nav-tabs {
+    margin-left: 20px;
+    margin-top: 20px
+}
+
+.sidebar-content-wrapper ul.card-listing {
+    padding-top: 20px;
+    max-height: 400px;
+    min-height: 70vh
+}
+
+.sidebar-content-wrapper span.date-controller {
+    font-size: 11px;
+    font-weight: 500
+}
+
+.sidebar-content-wrapper .card-box .blue {
+    font-size: 14px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap
+}
+
+.event-search-panel>span.seach-icon {
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    font-size: 18px
+}
+
+.skin-1.maincontai.main-body .event-search-panel input.form-control::-webkit-input-placeholder {
+    color: #000;
+    font-weight: 700
+}
+
+.skin-1.maincontai.main-body .event-search-panel input.form-control::-moz-placeholder {
+    color: #000;
+    font-weight: 700
+}
+
+.skin-1.maincontai.main-body .event-search-panel input.form-control::-ms-input-placeholder {
+    color: #000;
+    font-weight: 700
+}
+
+.skin-1.maincontai.main-body .event-search-panel input.form-control::placeholder {
+    color: #000;
+    font-weight: 700
+}
+
+.sidebar-content-wrapper .event-search-panel {
+    position: relative;
+    min-width: 260px
+}
+
+.sidebar-content-wrapper .dis-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center
+}
+
+.event-search-panel input.form-control {
+    border: 1px solid #d3d3d3 !important
+}
+
+@media(max-width:1200px) {
+    .sidebar-content-wrapper ul.card-listing li {
+        width: 31%
+    }
+}
+
+@media(max-width:992px) {
+    .sidebar-content-wrapper {
+        padding-top: 90px
+    }
+
+    .sidebar-content-wrapper ul.card-listing li {
+        width: 48%
+    }
+
+    .sidebar-content-wrapper ul.card-listing {
+        padding-right: 10px
+    }
+}
+
+.notificationCol .bellIcon sup {
+    position: absolute !important;
+    top: 0 !important;
+    right: -4px !important;
+    background: #f8b144 !important;
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #fff !important
+}
+
+.nav.nav-tabs.bonusRow::-webkit-scrollbar {
+    height: 8px !important
+}

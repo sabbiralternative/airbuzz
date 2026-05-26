@@ -1,0 +1,859 @@
+@media (max-width: 1024px) {
+  :root {
+    --secondary: #272727;
+    --activeBG:#757575;
+  }
+
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .leftMain {
+    display: none !important;
+  }
+
+  .rightMain {
+    overflow: hidden;
+    margin-left: 0px !important;
+    /* margin-right: 10px !important; */
+    /* padding-left: 15px; */
+    width: 100%;
+    /* margin-top: 45px; */
+  }
+
+  .gameBox {
+    max-width: 180px;
+  }
+
+  /* 
+  .game-carousel {
+    padding: 0px 15px;
+  } */
+
+  .loginCol .btn-dark {
+    background: var(--darkBg) !important;
+  }
+
+  .headgameNav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .caninoRow {
+    margin: 1.0rem 0 0;
+  }
+
+  .loginModal .form-control {
+    background: none;
+    border: 1px solid var(--white-color);
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--white-color);
+    height: 32px;
+    padding: 0 35px 0 10px
+  }
+
+  .loginModal input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  input:-internal-autofill-selected {
+    color: var(--white-color) !important;
+    -webkit-text-fill-color: var(--white-color) !important;
+    -webkit-box-shadow: 0 0 0 0 white inset !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+
+  }
+
+  .loginModal .countryBox {
+    padding: 0 10px !important
+  }
+
+  .loginModal .col-form-label {
+    color: var(--white-color);
+    font-size: 14px;
+  }
+
+  .loginModal .form-control::placeholder {
+    opacity: inherit;
+    color: var(--white-color);
+  }
+
+  .loginModal select {
+    background: none !important;
+    height: 32px !important;
+  }
+
+  .loginModal .forgettext {
+    float: right;
+    font-size: 12px;
+    color: var(--white-color) !important;
+    cursor: pointer;
+    margin: 3px 0 0;
+    text-decoration: underline !important;
+    text-decoration-color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .loginModal .loginbtn {
+    margin: 70px 0 15px;
+  }
+
+  .loginModal .demeLogin {
+    margin: 0 0 15px;
+  }
+
+  .loginModal .loginbtn .btn {
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    min-height: 36px;
+    border-radius: 8px;
+    text-transform: uppercase;
+  }
+
+  .loginModal .loginbtn .btn-light,
+  .loginModal .loginbtn .btn-warning {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 0 1rem;
+  }
+
+  .loginModal .withCancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 16px;
+    padding: 0 16px;
+  }
+
+  .loginModal .stakeRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 0 16px;
+  }
+
+  .loginModal .inputbox {
+    width: 65px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    border-radius: 3px;
+  }
+
+  .loginModal .optMsg {
+    padding: 0 28px;
+  }
+
+  .loginModal .optMsg h6 {
+    color: var(--white-color);
+  }
+
+  .loginModal .resendBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 10px;
+    margin: 15px 0 0;
+  }
+
+  .loginModal .resendBox p,
+  .loginModal .resendBox .timeText {
+    color: var(--white-color);
+    margin: 0;
+  }
+
+  .loginModal .modal-socialLInk {
+    margin-top: 10px !important;
+  }
+
+  .whatsappCol .or-text {
+    width: 100%;
+    text-align: center;
+    margin: 8px 0;
+    display: block;
+    color: var(--white-color);
+    font: 700 14px/14px var(--font);
+  }
+
+  .whatsappCol .whatsappBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    gap: 0 25px;
+    background: #39b44a;
+    color: var(--white-color);
+    width: 100%;
+    padding: 0 10px;
+    font-weight: 700;
+    font-size: 14px;
+    min-height: 36px;
+    border-radius: 8px;
+    text-transform: uppercase;
+  }
+
+  .whatsappCol .whatsappBtn .fa {
+    font-size: 28px;
+  }
+
+  .signUpNew_icons {
+    margin: 15px 0 0;
+  }
+
+  .signUpNew_icons ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .signUpNew_icons li {
+    font: 500 10px/10px var(--font);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 32%;
+  }
+
+  .signUpNew_icons li br {
+    display: none;
+  }
+
+  .signUpNew_icons img {
+    width: 32px;
+    margin: 0 5px 0 0;
+  }
+
+  .mobscro {
+    overflow: hidden;
+  }
+
+  .mainRow {
+    transition: all 0.3s;
+    left: 0;
+    position: relative;
+  }
+
+  .mobscro .mainRow {
+    left: 290px;
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .marketoddRow {
+    padding: 15px 0px 10px 5px;
+    margin: 20px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: var(--darkBg);
+    border-bottom: 5px solid var(--darkBg);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .marketList {
+    padding: 0 8px;
+    border-radius: 5px;
+    background: var(--listBox);
+    min-width: 230px;
+    min-height: 96px;
+    margin: 0 6px;
+  }
+
+  .marketList .iconRow {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    gap: 0 5px;
+  }
+
+  .marketList .iconLive svg {
+    width: 20.5px;
+    fill: #53e954;
+  }
+
+  .marketList .sportIcon svg {
+    width: 15px;
+    fill: #fff;
+  }
+
+  .marketList .compName {
+    color: rgba(255, 255, 255, 0.7);
+    font: 500 12px/18px var(--font);
+    flex: auto;
+  }
+
+  .marketList .winText {
+    font: 600 10px/14px var(--font);
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .marketList .oddBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+    flex-direction: row;
+  }
+
+  .marketList .marketNameBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 65%;
+  }
+
+  .marketList .marketNameBox .eName {
+    font: 500 12px/18px var(--font);
+    color: var(--white-color);
+  }
+
+  .marketList .marketOdds {
+    width: 30%;
+    position: relative;
+    display: inline;
+  }
+
+  .marketList .marketOdds .btn {
+    border: 1px solid var(--white-color);
+    background: rgba(255, 255, 255, 0.4);
+    margin: 5px 0 0;
+    box-shadow: none;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 62px;
+    height: 24px;
+    font: 500 12px/12px var(--font);
+  }
+
+  .marketList .marketOdds .btn:first-child {
+    margin: 0;
+  }
+
+  .marketList .marketOdds .suspended {
+    top: 0;
+    height: 53px;
+    font-size: 8px;
+    border-radius: 3px;
+  }
+
+  .marketList .marketOdds .ballRunning {
+    padding: 0 5px;
+    text-wrap: wrap;
+    line-height: 10px;
+    text-align: center;
+  }
+
+  .marketList .noText {
+    color: var(--white-color);
+  }
+
+  .marketoddRow .notFound {
+    min-height: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .marketoddRow .notFound .noRecords {
+    color: var(--white-color);
+    font: 600 14px/14px var(--font);
+    margin: 0;
+  }
+
+  .aboutRow {
+    background: rgba(84, 84, 84, 0.2);
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  .aboutRow p {
+    color: rgba(255, 255, 255, 0.5);
+    font: 400 10px/16px var(--font);
+    margin: 0;
+  }
+
+  .copyrightSec {
+    text-align: center;
+    margin: 10px 0 0;
+  }
+
+  .copyrightSec p {
+    font: 500 12px/16px var(--font);
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 20px;
+  }
+
+  .copyrightSec p:last-child {
+    margin: 0 0 10px;
+  }
+
+  /* Events pages css */
+  .eventMain {
+    width: 100%;
+  }
+
+  .playerDasbord .app-market-dashboard,
+  .playerDasbord app-player-event-detail,
+  .playerDasbord app-d11-special-market,
+  .playerDasbord {
+    background: #D9D9D9 !important;
+  }
+
+  .inPlayTab {
+    background: var(--primary);
+    min-height: 36px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 0rem;
+  }
+
+  .inPlayTab ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  .inPlayTab li {
+    padding: 0 15px;
+    position: relative;
+  }
+
+  .inPlayTab li::before {
+    content: '';
+    top: 7px;
+    left: 0;
+    position: absolute;
+    width: 1px;
+    height: 22px;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+
+  .inPlayTab li:first-child::before {
+    display: none;
+  }
+
+  .inPlayTab li .inTab {
+    padding: 8.4px 0;
+    display: block;
+    font: 700 16px/16px var(--font);
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    color: #fff !important;
+  }
+
+  .inPlayTab li .active {
+    border-bottom: 3px solid rgba(255, 255, 255, 1);
+    color: #fff !important;
+  }
+
+  /* In-Play sprots filter */
+  .inPlayFilter {
+    clear: both;
+    margin: 0;
+    display: flex;
+    gap: 0 0.75rem;
+    align-items: center;
+    position: relative;
+    background: var(--primary);
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, .2);
+  }
+
+  .inPlayFilter .nav-tabs {
+    border-bottom: none;
+  }
+
+  .inPlayFilter .arrow-tabs {
+    font-size: 1rem;
+    line-height: 2rem;
+    height: 100%;
+    padding: 0.875rem 0.5rem;
+    color: #fff;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, .1);
+    position: relative;
+    top: -0.313rem;
+    cursor: pointer;
+  }
+
+  .inPlayFilter .arrow-left {
+    left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .inPlayFilter .arrow-right {
+    right: 0;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .inPlayFilter ul {
+    display: flex;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+
+  .inPlayFilter ul::-webkit-scrollbar {
+    height: 2px;
+    display: none;
+  }
+
+  .inPlayFilter li::before {
+    content: '';
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    height: 80%;
+    left: 0;
+  }
+
+  .inPlayFilter li {
+    padding: 0 0 2px;
+    position: relative;
+  }
+
+  .inPlayFilter li a {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    font-size: 0.5rem;
+    letter-spacing: 1.5px;
+    padding: 0.313rem 0.625rem 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff !important;
+    border: none;
+    border-bottom: 0.125rem solid transparent;
+    cursor: pointer;
+  }
+
+  .inPlayFilter li a:hover {
+    background: none;
+    border-bottom: 3px solid #fff;
+  }
+
+  .inPlayFilter .active {
+    border-bottom: 3px solid #fff;
+  }
+
+  .sportscardRow .matchList {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: block;
+  }
+
+  .sportscardRow .teamNameRow {
+    width: auto;
+  }
+
+  .sportscardRow .teamNameRow .nameCol .vsName {
+    font: 700 14px/18px var(--font);
+    margin: 0;
+    position: relative;
+  }
+
+  .sportscardRow .teamNameRow .nameCol .vs {
+    margin: 0 5px;
+    color: #626770;
+  }
+
+  .sportscardRow .teamNameRow .nameCol .datetime {
+    font: 500 10px/14px var(--font)
+  }
+
+  .sportscardRow .teamNameRow .datetime {
+    width: 100%;
+  }
+
+  .sportscardRow .teamNameRow .iconsRow .pIcon img {
+    width: 18px;
+    margin-top: -3px;
+  }
+
+  .sportscardRow .teamNameRow .iconsRow .iconBook img {
+    width: 25px;
+  }
+
+  .sportscardRow .teamNameRow .iconsRow .iconLive svg {
+    width: 22px;
+    fill: #3aa740;
+  }
+
+  .sportscardRow .teamNameRow .iconsRow .playNow .fa {
+    font-size: 20px;
+    color: #3aa740;
+  }
+
+  .sportscardRow .teamNameRow .iconsRow .iconPin svg {
+    width: 15px;
+    fill: #b2b2b2;
+  }
+
+  .sportscardRow .teamNameRow .iconsRow .pinactive svg {
+    fill: #2c2c2c !important;
+  }
+
+  .sportscardRow .oddsRow {
+    display: flex;
+    gap: 0 3px;
+    margin: 10px 0 3px;
+    position: relative;
+  }
+
+  .sportscardRow .oddsRow li {
+    height: 30px;
+    border-radius: 8px;
+    font: 700 14px/16px var(--font)
+  }
+
+  .sportscardRow .backlayHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    min-height: 28px;
+  }
+
+  .sportscardRow .backlayHead .minMax {
+    width: 58%;
+    font: 500 12px/13px var(--font);
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .sportscardRow .backlayHead .backlayText {
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sportscardRow .backlayHead .backlayText span {
+    width: 48%;
+    text-align: center;
+    font: 700 14px/18px var(--font);
+  }
+
+  .sportscardRow .runnerName marquee {
+    position: absolute;
+    bottom: -4px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .sportscardRow .runnerName .vsName {
+    font: 700 14px/16px var(--font);
+    margin: 0;
+    width: 100%;
+  }
+
+  .sportscardRow .runnerName .vsName span {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .mainRow,
+  .app-market-pinned .mian-wrap {
+    margin: 42px 0 63px;
+    padding: 0 0 10px;
+    min-height: calc(100dvh - 106px);
+  }
+
+  .sportscardRow .mpIcon {
+    display: none !important;
+  }
+
+  .sportscardRow .runnerOdds li {
+    width: 57px !important;
+    min-height: 42px;
+    flex-direction: column;
+    padding: 5px 8px;
+  }
+
+  .sportscardRow .runnerOdds li small {
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .oddsRow div.suspended {
+    height: 42px;
+  }
+
+  .sportscardRow .fancyList {
+    border-top: 1.5px solid rgba(0, 0, 0, 0.2);
+    padding: 3px 0;
+  }
+
+  .sportscardRow .fancyList .oddsList {
+    border-top: none;
+    padding: 2px 10px;
+  }
+
+  .sportscardRow .fancyList .runnerName .vsName {
+    flex: auto;
+  }
+
+  .sportscardRow .starIconCol {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .sportscardRow .starIconCol i.fa-info {
+    width: 15px;
+    height: 15px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 15px;
+    font-size: 10px;
+    margin: 0 5px;
+  }
+
+  .sportscardRow .oddsRow li .suspended {
+    font-size: 9px;
+  }
+
+  .sportscardRow .fancyList .runnerName marquee {
+    position: absolute;
+    bottom: -5px;
+    font-size: 10.5px;
+  }
+
+  .sportscardRow .fancyList .runnerOdds li {
+    min-height: 46px
+  }
+
+  .sportscardRow .fancyList .suspended {
+    height: 48px !important;
+    width: 98%;
+  }
+
+  .sportscardRow .luckyNum {
+    flex-wrap: wrap;
+    padding: 0 10px 5px;
+  }
+
+  .sportscardRow .runnerName {
+    width: 100%;
+  }
+
+  .sportscardRow .luckyNum .runnerOdds {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 5px;
+  }
+
+  /* Casino Section */
+  .casinoList .gameBox {
+    width: 18%;
+  }
+
+  .fliterRow .form-control {
+    height: 26px !important;
+    padding: 0 10px;
+    border-color: rgba(255, 255, 255, 0.2);
+    font: 500 12px/16px var(--font);
+    color: var(--white-color);
+    background: var(--primary);
+    border-radius: 5px;
+  }
+
+  .fliterRow .form-control::placeholder {
+    color: var(--white-color);
+    opacity: inherit;
+  }
+
+  .fliterRow .form-control:focus {
+    background-color: transparent;
+    border: 0.2px solid #e4e7ec51;
+  }
+
+  .fliterRow .cmdBtn {
+    display: none;
+  }
+
+  .fliterRow .form-label {
+    font: 500 24px/56px var(--font);
+    color: var(--themeText);
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .fliterRow .form-control option {
+    font: 400 16px/26px var(--font);
+  }
+
+  .custom-dropdown {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .custom-dropdown-button {
+    padding: 0 20px 0 10px;
+    width: 100%;
+    background: var(--primary);
+    color: var(--white-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    height: 26px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 500 12px/12px var(--font);
+    text-align: left;
+    position: relative;
+  }
+
+  .custom-dropdown-button::after {
+    display: none;
+  }
+
+.providerCol .carousel-data{background: var(--secondary); color: #fff; font-size: 11px; font-weight: 500; border-radius: 3px; border: 1px solid transparent; height: 32px!important; display: flex; justify-content: center; align-items: center; overflow: hidden!important; position: relative; cursor: pointer;}
+.providerCol .carousel-data img{height: 24px!important; filter: grayscale(1) brightness(9); object-fit: contain;}
+.providerCol .active{background: var(--activeBG)!important; border: 1px solid rgba(255,255,255,0.2); width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.providerCol .active img{filter:inherit;}
+}
+
+@media (max-width: 767px) {
+
+  .gameBox {
+    max-width: 160px;
+  }
+
+  .casinoList .gameBox {
+    width: 30%;
+  }
+
+}
+
+/* Casino Section */

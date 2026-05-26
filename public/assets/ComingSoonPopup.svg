@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" id="gscale" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1 "> -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/icefab.png" sizes="16x16" id="appFavicon" />
+    <meta charset="utf-8">
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/daterangepicker.css" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="./assets/css/design-structure.css" rel="stylesheet">
+    <link href="./assets/css/style-whitelabale.css" rel="stylesheet">
+    <link href="./assets/style-glob.css" rel="stylesheet">
+    <link href="./assets/css/score-theme.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" type="text/css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest" defer></script>
+    <script src="./assets/js/t20iphoneadapter.js" type="text/javascript" defer></script>
+    <script src="./assets/js/t20iphoneplayer.js" type="text/javascript" defer></script>
+
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="application/javascript"
+        src="https://widgets.sir.sportradar.com/020d534eac2800ca94e178bc9d3f060e/widgetloader" async></script>
+    
+   
+    <script src="./assets/js/custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!-- this script for drag drop funtionality (tranding event) -->
+
+
+    <!-- D3 -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- <link rel="stylesheet" href="https://www.lotusbook247.com/m/variables.58d9335ff0096b1c5167.css"> -->
+
+
+    <!-- Global site tag All website (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXKV96FKFP"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-HXKV96FKFP');
+    </script>
+
+    
+
+
+<!-- Google Tag Managerd11 -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KMN58FP');</script>
+    <!-- End Google Tag Manager -->
+
+    
+    <!-- BetReder Script -->
+<!-- <script src="https://iceexchange.sptpub.com/bt-renderer.min.js"></script> -->
+
+    <!-- Gaming licence ford11 -->
+ <script type="text/javascript" src="https://e327fce8-17d5-471c-9928-8480027600de.snippet.anjouangaming.org/anj-seal.js"></script>
+
+    <!-- OCR work CDN -->
+ <!-- <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script> --> <!--Dynamic append for admin-->
+
+ <!------------ AES Encryption/Decryption -------------->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+<link rel="stylesheet" href="styles.91da0b92f42f7e474caa.css"></head>
+
+<body id="app-body" class="web skyexchange ">
+
+    <!-- Google Tag Managerd11 (noscript) -->
+    <noscript id="icecrictag">
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMN58FP"
+    height="0" width="0" style="display:none;"></iframe>
+</noscript>
+
+    <!-- End Google Tag Manager (noscript) -->
+
+    <app-root></app-root>
+    <script type="text/javascript">
+        // for casino stram
+        function loadHTMLVideo(sname) {
+            var webrtcPlayer = null;
+            try {
+                webrtcPlayer = new T20RTCPlayer("remoteVideo", sname, "", "real-game.live", "", true, true, "tcp");
+                webrtcPlayer.Play();
+            } catch (error) {
+                // console.log(error)
+            }
+        }
+        function loadStreamVideo(sname, url) {
+
+            var webrtcPlayer = null;
+            try {
+                webrtcPlayer = new T20RTCPlayer("remoteVideo", sname, "", url, "", true, true, "tcp");
+                webrtcPlayer.Play();
+            } catch (error) {
+                // console.log(error)
+            }
+        }
+
+        window.addEventListener('online', () => document.getElementById('gscale').classList.remove('grayscale'));
+        window.addEventListener('offline', () => document.getElementById('gscale').classList.add('grayscale'));
+    </script>
+
+    <!-- <iframe style="display:none;" src="http://localhost:3300" id="world777ifr"></iframe>
+
+<iframe style="display:none;" src="http://localhost:3500" id="diamondifr"></iframe> -->
+<script src="runtime-es2015.1824c1d469a75ed21eba.js" type="module"></script><script src="polyfills-es2015.c69a9a63a6a35bd4a6c5.js" type="module"></script><script src="runtime-es5.fa7b9ff7db85f1dfafb3.js" nomodule defer></script><script src="polyfills-es5.630200b979328bb70d9d.js" nomodule defer></script><script src="main-es2015.b01125b8142d1d7652a2.js" type="module"></script><script src="main-es5.8cb91f3759a2eb77ca6f.js" nomodule defer></script></body>
+
+</html>
