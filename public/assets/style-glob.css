@@ -1,6 +1,6 @@
 /* @import url("animation.css"); */
-@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 @import url("games.css");
 @import url("b2-style.css");
 @import url("loyalty.css");
@@ -19,7 +19,11 @@
   --sideLinkBG: rgba(255, 255, 255, 0.1);
   --secondaryRgba: rgba(31, 31, 48, 0.9);
   --bodyCR: #1a1a1a;
-  --pinnedBtn: linear-gradient(104deg, var(--primary) 74%, var(--secondary) 74%);
+  --pinnedBtn: linear-gradient(
+    104deg,
+    var(--primary) 74%,
+    var(--secondary) 74%
+  );
   --loginBG: #1a1a1a;
   --activeTab: #1f2034;
   --activeBG: #003a4c;
@@ -35,7 +39,7 @@
   --balBtnBG: rgba(0, 0, 0, 0.4);
   --profileNameBG: rgba(0, 0, 0, 0.4);
   --listBox: #2a2c38;
-  --titleText: #2C2C2C;
+  --titleText: #2c2c2c;
   --borderCR: #2a4b9a;
   --faqActive: #2a4b9a;
   --backRowBG: #1a1a1a;
@@ -72,7 +76,7 @@
 
 .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0)
+  transform: translate(0, 0);
 }
 
 ul {
@@ -132,7 +136,7 @@ a {
 }
 
 .resultclass {
-  color: #3BB9FF;
+  color: #3bb9ff;
   cursor: pointer;
 }
 
@@ -189,7 +193,7 @@ button:focus {
 }
 
 .rightTik {
-  top: 0.5rem
+  top: 0.5rem;
 }
 
 .errorMa,
@@ -335,7 +339,7 @@ button:focus {
 .logoCol {
   height: 0.0075rem;
   width: 90%;
-  margin: 2.125rem 0 2.460rem;
+  margin: 2.125rem 0 2.46rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -422,7 +426,6 @@ button:focus {
   display: inline-block;
 }
 
-
 /* .sideMenu .game-option{overflow-y: auto; height: 100%;} */
 .sideMenu .game-option ul {
   width: 100%;
@@ -472,7 +475,7 @@ button:focus {
 }
 
 .sideMenu .game-option ul.menu li a.base-c:after {
-  content: '\f0d8';
+  content: "\f0d8";
   font: 1.75rem/1.75rem FontAwesome;
   position: absolute;
   right: 0.75rem;
@@ -535,7 +538,7 @@ button:focus {
 }
 
 .sideMenu .game-option ul.subclildmenu li ul.menu li a.base-c::before {
-  content: '\f0d7';
+  content: "\f0d7";
   font: 1.25rem/1.25rem FontAwesome;
   position: absolute;
   left: 0;
@@ -559,7 +562,7 @@ button:focus {
 }
 
 .sideMenu .game-option ul.subclildmenu li ul.thirdNav li ul::before {
-  content: '';
+  content: "";
   width: 1px;
   height: 1rem;
   background: #fff;
@@ -569,7 +572,7 @@ button:focus {
 }
 
 .sideMenu .game-option ul.subclildmenu li ul.thirdNav li ul::after {
-  content: '';
+  content: "";
   width: 1px;
   height: 1.7rem;
   background: var(--primary);
@@ -593,7 +596,7 @@ button:focus {
 }
 
 .sideMenu .game-option ul.subclildmenu li ul.thirdNav li a.thirdmenu::before {
-  content: '';
+  content: "";
   width: 0.5rem;
   height: 1px;
   display: block;
@@ -605,7 +608,7 @@ button:focus {
 }
 
 .sideMenu .game-option ul.subclildmenu li ul.thirdNav li a.thirdmenu::after {
-  content: '\f111';
+  content: "\f111";
   font: 0.625rem/0.625rem FontAwesome;
   color: #fff;
   height: 0.625rem;
@@ -620,7 +623,14 @@ button:focus {
   opacity: inherit;
 }
 
-.sideMenu .game-option ul.subclildmenu li ul.thirdNav li a.thirdmenu:hover ::after {
+.sideMenu
+  .game-option
+  ul.subclildmenu
+  li
+  ul.thirdNav
+  li
+  a.thirdmenu:hover
+  ::after {
   opacity: inherit;
 }
 
@@ -633,15 +643,38 @@ button:focus {
   opacity: inherit;
 }
 
-.sideMenu .game-option ul.subclildmenu li ul.thirdNav li ul.allActive a.thirdmenu {
+.sideMenu
+  .game-option
+  ul.subclildmenu
+  li
+  ul.thirdNav
+  li
+  ul.allActive
+  a.thirdmenu {
   opacity: inherit;
 }
 
-.sideMenu .game-option ul.subclildmenu li ul.thirdNav li ul.allActive a.thirdmenu::after {
+.sideMenu
+  .game-option
+  ul.subclildmenu
+  li
+  ul.thirdNav
+  li
+  ul.allActive
+  a.thirdmenu::after {
   opacity: inherit;
 }
 
-.sideMenu .game-option ul.subclildmenu li ul.thirdNav li ul li a.thirdmenu .evtName {
+.sideMenu
+  .game-option
+  ul.subclildmenu
+  li
+  ul.thirdNav
+  li
+  ul
+  li
+  a.thirdmenu
+  .evtName {
   border-bottom: 1px solid var(--activeBG);
   display: flex;
   align-items: center;
@@ -651,7 +684,17 @@ button:focus {
   margin-left: 1rem;
 }
 
-.sideMenu .game-option ul.subclildmenu li ul.thirdNav li ul li a.thirdmenu .evtName span {
+.sideMenu
+  .game-option
+  ul.subclildmenu
+  li
+  ul.thirdNav
+  li
+  ul
+  li
+  a.thirdmenu
+  .evtName
+  span {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -659,11 +702,27 @@ button:focus {
   white-space: pre-wrap;
 }
 
-.sideMenu .game-option ul.subclildmenu li ul.thirdNav li ul li:last-child .evtName {
+.sideMenu
+  .game-option
+  ul.subclildmenu
+  li
+  ul.thirdNav
+  li
+  ul
+  li:last-child
+  .evtName {
   border-bottom: none !important;
 }
 
-.sideMenu .game-option ul.subclildmenu li ul.thirdNav li a.thirdmenu .icon-sub-category .fa {
+.sideMenu
+  .game-option
+  ul.subclildmenu
+  li
+  ul.thirdNav
+  li
+  a.thirdmenu
+  .icon-sub-category
+  .fa {
   font-size: 0.5rem !important;
 }
 
@@ -861,12 +920,20 @@ button:focus {
   margin: 0 !important;
 }
 
-.sideMenu .modal-socialLInk div a.float.telegramicon i.fab.fa-telegram.my-float {
+.sideMenu
+  .modal-socialLInk
+  div
+  a.float.telegramicon
+  i.fab.fa-telegram.my-float {
   color: rgba(0, 0, 0, 0.5) !important;
   font-size: 1.25rem !important;
 }
 
-.sideMenu .modal-socialLInk div a.float.telegramicon:hover i.fab.fa-telegram.my-float {
+.sideMenu
+  .modal-socialLInk
+  div
+  a.float.telegramicon:hover
+  i.fab.fa-telegram.my-float {
   color: rgba(0, 0, 0, 0.9) !important;
 }
 
@@ -1024,7 +1091,7 @@ app-d11-dynamic-header {
   justify-content: center;
   gap: 0.313rem;
   border-radius: 0.625rem;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .expBalBtn {
@@ -1096,7 +1163,7 @@ app-d11-dynamic-header {
   height: 3.5rem;
   background: var(--secondary);
   border-color: var(--secondary);
-  padding: 0.125rem .75rem;
+  padding: 0.125rem 0.75rem;
   font-size: 0.875rem;
 }
 
@@ -1187,10 +1254,10 @@ app-d11-dynamic-header {
 }
 
 .dropdown-toggle::after {
-  border-top: .4em solid;
-  border-right: .4em solid transparent;
+  border-top: 0.4em solid;
+  border-right: 0.4em solid transparent;
   border-bottom: 0;
-  border-left: .4em solid transparent;
+  border-left: 0.4em solid transparent;
 }
 
 .langSelect a {
@@ -1245,7 +1312,7 @@ app-d11-dynamic-header {
 }
 
 .langHeader {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .langHeader .form-control {
@@ -1271,7 +1338,7 @@ app-d11-dynamic-header {
 }
 
 .proName {
-  margin: 0 0 0 .75rem;
+  margin: 0 0 0 0.75rem;
   background: var(--profileNameBG);
   padding: 0 1rem;
   min-width: 8rem;
@@ -1487,7 +1554,7 @@ div.notificationCol .bellIcon sup {
 }
 
 .profileRow::before {
-  content: '\f00d';
+  content: "\f00d";
   font-family: FontAwesome;
   font-size: 1.5rem;
   top: -3.5rem;
@@ -1579,7 +1646,7 @@ div.notificationCol .bellIcon sup {
 /* .profileRow .accountTabs li{min-height: 4rem; flex:0 0 32%; background: var(--secondaryRgba); color: var(--white-color); cursor: pointer;  border-radius: 0.5rem; padding:0.75rem 1rem; display: flex; align-items: center; justify-content: center; text-align: center; font:500 1rem/1.25rem var(--font);} */
 .profileRow .accountTabs li {
   flex: 0 0 100%;
-  border: 1px solid rgba(255, 255, 255, .7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   color: var(--white-color);
   cursor: pointer;
   border-radius: 0.5rem;
@@ -1652,7 +1719,13 @@ div.notificationCol .bellIcon sup {
 
 .bannerRow .carousel-item {
   animation: gradient 1s linear infinite;
-  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)) !important;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  ) !important;
   background-size: 300% 100%;
   aspect-ratio: 5 / 1;
   height: -webkit-min-content;
@@ -1750,7 +1823,7 @@ div.notificationCol .bellIcon sup {
   display: none;
 }
 
-swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
+swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
   overflow: hidden !important;
 }
 
@@ -1773,7 +1846,13 @@ swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
   height: min-content;
   border-radius: 1rem;
   animation: gradient 1s linear infinite;
-  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  );
   background-size: 300% 100%;
 }
 
@@ -1871,7 +1950,13 @@ swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
   height: min-content;
   border-radius: 1rem;
   animation: gradient 1s linear infinite;
-  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  );
   background-size: 300% 100%;
 }
 
@@ -2045,7 +2130,7 @@ swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
 
 .marketList .marketOdds .suspended::before,
 .marketList .marketOdds .suspended::after {
-  content: '';
+  content: "";
   background: rgba(0, 0, 0, 0.4);
   height: 100%;
   width: 48%;
@@ -2131,7 +2216,7 @@ swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
 
 .faqHeading::before,
 .faqHeading::after {
-  content: '';
+  content: "";
   top: 45%;
   position: absolute;
   width: 71%;
@@ -2223,10 +2308,36 @@ swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
   margin: 0 0 1.5rem;
 }
 
-.footer-SocialLInk a {font: 600 1.25rem / 1.375rem var(--font);  text-decoration: none; margin: 0rem .4rem .75rem; width: 2.188rem; height: 2.188rem;  border-radius: 50%;  display: flex; justify-content: center;  align-items: center;}
-.footer-SocialLInk .facebookBar a {background: #354d93; color: #fff;}
-.footer-SocialLInk .telegramBar a {color: #00a4e0; font-size: 35px;}
-.footer-SocialLInk .instagramBar a {color: rgba(255, 255, 255, .5);   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);}
+.footer-SocialLInk a {
+  font: 600 1.25rem / 1.375rem var(--font);
+  text-decoration: none;
+  margin: 0rem 0.4rem 0.75rem;
+  width: 2.188rem;
+  height: 2.188rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-SocialLInk .facebookBar a {
+  background: #354d93;
+  color: #fff;
+}
+.footer-SocialLInk .telegramBar a {
+  color: #00a4e0;
+  font-size: 35px;
+}
+.footer-SocialLInk .instagramBar a {
+  color: rgba(255, 255, 255, 0.5);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
 
 .copyrightSec {
   border-top: 2px solid rgba(255, 255, 255, 0.6);
@@ -2247,7 +2358,6 @@ swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
   position: relative;
   margin: 2.813rem 0 0;
   animation: slideDown 0.6s ease-out;
-  
 }
 /* @keyframes slideDown {
   0% {
@@ -2291,7 +2401,6 @@ swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
   color: var(--white-color);
   padding: 0.5rem 1rem 0.2rem 1rem;
   border-radius: 0.625rem 0.625rem 0 0;
-  
 }
 
 .loginModal .close span {
@@ -2359,7 +2468,7 @@ swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
   font-size: 0.875rem;
   color: var(--white-color);
   height: 42px;
-  padding: 0 2.25rem 0 0.75rem
+  padding: 0 2.25rem 0 0.75rem;
 }
 
 .loginModal input:-webkit-autofill,
@@ -2568,7 +2677,6 @@ input:-webkit-autofill:active {
   font-size: 85%;
 }
 
-
 .providerCol {
   position: relative;
   overflow: hidden;
@@ -2632,7 +2740,6 @@ input:-webkit-autofill:active {
   filter: inherit;
 }
 
-
 .fliterRow {
   width: 100%;
   margin: 1.5rem 0;
@@ -2682,7 +2789,6 @@ input:-webkit-autofill:active {
   font: 400 1rem/1.625rem var(--font);
 }
 
-
 .custom-dropdown {
   position: relative;
   max-width: 100%;
@@ -2705,7 +2811,7 @@ input:-webkit-autofill:active {
 }
 
 .custom-dropdown-button::after {
-  content: '\f107';
+  content: "\f107";
   font: 1.875rem/1.875rem FontAwesome;
   color: var(--white-color);
   height: 52px;
@@ -2726,7 +2832,7 @@ input:-webkit-autofill:active {
 }
 
 .custom-dropdown .select::after {
-  content: '\f106';
+  content: "\f106";
   background: var(--white-color);
   color: var(--secondary);
 }
@@ -2780,7 +2886,7 @@ input:-webkit-autofill:active {
 }
 
 .custom-dropdown-list-item::after {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 1.25rem;
   width: 14px;
@@ -2797,7 +2903,7 @@ input:-webkit-autofill:active {
 }
 
 .custom-dropdown-list-item.active::after {
-  content: '\f111';
+  content: "\f111";
   font-size: 0.625rem;
   font-family: FontAwesome;
   border-radius: 1.25rem;
@@ -2909,7 +3015,7 @@ app-player-fantasy .backRow {
 }
 
 .inPlayTab li::before {
-  content: '';
+  content: "";
   top: 0.25rem;
   left: 0;
   position: absolute;
@@ -2962,7 +3068,7 @@ app-player-fantasy .backRow {
   height: 10px;
   width: 12px;
   position: absolute;
-  content: '';
+  content: "";
   background: var(--darkBg);
   display: block;
   bottom: -0.625rem;
@@ -2972,12 +3078,12 @@ app-player-fantasy .backRow {
 .sportscardRow .sportHeading::after {
   height: 11px;
   width: 20px;
-  content: '';
+  content: "";
   background: #fff;
   position: absolute;
   bottom: -11px;
   left: 0;
-  content: '';
+  content: "";
   border-radius: 0.625rem 0 0;
 }
 
@@ -3043,7 +3149,7 @@ app-player-fantasy .backRow {
 
 .sportscardRow .fancyaTabs ul {
   display: flex;
-  gap: 0.625rem
+  gap: 0.625rem;
 }
 
 .sportscardRow .fancyaTabs li a {
@@ -3052,7 +3158,7 @@ app-player-fantasy .backRow {
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0 0.625rem;
   border-radius: 0.375rem;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .sportscardRow .fancyaTabs li.active a {
@@ -3140,7 +3246,7 @@ app-player-fantasy .backRow {
 }
 
 .sportscardRow .teamNameRow .nameCol .datetime {
-  font: 500 0.625rem/0.75rem var(--font)
+  font: 500 0.625rem/0.75rem var(--font);
 }
 
 .sportscardRow .teamNameRow .datetime {
@@ -3262,7 +3368,7 @@ app-player-fantasy .backRow {
   justify-content: space-between;
   align-items: center;
   border-top: 1.5px solid rgba(0, 0, 0, 0.2);
-  padding: 0.313rem 0.625rem
+  padding: 0.313rem 0.625rem;
 }
 
 .sportscardRow .runnerName {
@@ -3374,7 +3480,7 @@ app-player-fantasy .backRow {
   justify-content: space-between;
   gap: 0.625rem;
   position: relative;
-  opacity: 0
+  opacity: 0;
 }
 
 .sportscardRow .fancyList .oddMin {
@@ -3382,7 +3488,7 @@ app-player-fantasy .backRow {
 }
 
 .sportscardRow .fancyList div.fancyOdds:first-child .runnerName {
-  opacity: inherit
+  opacity: inherit;
 }
 
 .sportscardRow .fancyList div.fancyOdds:first-child .oddMin {
@@ -3395,7 +3501,7 @@ app-player-fantasy .backRow {
 
 .sportscardRow .fancyList .runnerName marquee {
   position: absolute;
-  bottom: -0.375rem
+  bottom: -0.375rem;
 }
 
 .sportscardRow .fancyList .runnerOdds {
@@ -3418,7 +3524,7 @@ app-player-fantasy .backRow {
 }
 
 .sportscardRow .spSmall {
-  font: 500 0.75rem/0.75rem var(--font) !important
+  font: 500 0.75rem/0.75rem var(--font) !important;
 }
 
 .sportscardRow .runPoint {
@@ -3426,7 +3532,6 @@ app-player-fantasy .backRow {
   gap: 0.313rem;
   flex-wrap: wrap;
   min-height: 1.625rem;
-  ;
 }
 
 .sportscardRow .runPoint li {
@@ -3551,7 +3656,7 @@ app-player-fantasy .backRow {
 }
 
 .eventDetail .suspended {
-  height: 2.625rem
+  height: 2.625rem;
 }
 
 .empty_message,
@@ -3604,13 +3709,24 @@ app-sports-book .mainWrap {
   width: 80px;
   animation: gradient 1s linear infinite;
   bottom: -0.5rem;
-  background: linear-gradient(120deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-  ;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2)
+  );
   background-size: 300% 100%;
 }
 
 .dummyMarket .sportHeading::before {
-  background: linear-gradient(120deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2)
+  );
 }
 
 .dummyMarket h3 {
@@ -3695,7 +3811,7 @@ app-sports-book .mainWrap {
 }
 
 app-d11-special-market .betSlipBox {
-  top: 2.6rem
+  top: 2.6rem;
 }
 
 .betSlipBox .headSlip {
@@ -3824,12 +3940,12 @@ app-d11-special-market .betSlipBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0 0.625rem
+  gap: 0 0.625rem;
 }
 
 .betSlipBox .maxminT {
-  font: 600 0.875rem/ 1.125rem var(--font);
-  color: #fff
+  font: 600 0.875rem/1.125rem var(--font);
+  color: #fff;
 }
 
 .betSlipBox .oddStakeRow {
@@ -3860,7 +3976,7 @@ app-d11-special-market .betSlipBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0 0.313rem
+  gap: 0 0.313rem;
 }
 
 .betSlipBox .inputCell .inputBTN {
@@ -3980,7 +4096,7 @@ app-d11-special-market .betSlipBox {
 }
 
 .betSlipBox .betDetails::before {
-  content: '\f0d8';
+  content: "\f0d8";
   font: 3rem/1rem FontAwesome;
   color: #fff;
   float: right;
@@ -4046,7 +4162,7 @@ app-d11-special-market .betSlipBox {
 }
 
 .betSlipBox .betTableData .matchName {
-  font: 600 1rem/ 1.125rem var(--font);
+  font: 600 1rem/1.125rem var(--font);
   color: #000;
   padding: 0 0.75rem;
 }
@@ -4109,16 +4225,16 @@ app-d11-special-market .betSlipBox {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: #FFF;
+  background: #fff;
   border-radius: 50%;
   box-shadow: 1px 0.188rem 0.375rem #000;
 }
 
-.customCheck input:checked+label {
+.customCheck input:checked + label {
   background: #39b44a;
 }
 
-.customCheck input:checked+label:after {
+.customCheck input:checked + label:after {
   left: auto;
   right: 2px;
 }
@@ -4213,7 +4329,7 @@ app-d11-special-market .betSlipBox {
 }
 
 .rightAnnou svg {
-  transform: scaleX(-1)
+  transform: scaleX(-1);
 }
 
 .profileNav {
@@ -4354,7 +4470,7 @@ app-d11-special-market .betSlipBox {
 }
 
 .filterTabs .tabLink::after {
-  content: '';
+  content: "";
   height: 100%;
   width: 1px;
   background: rgba(0, 0, 0, 0.8);
@@ -4409,7 +4525,7 @@ app-d11-special-market .betSlipBox {
   border: none !important;
   box-shadow: none !important;
   font: 500 0.875rem/1.125rem var(--font);
-  background: #EAEAEA !important;
+  background: #eaeaea !important;
   padding: 0 0.625rem !important;
   color: #000 !important;
 }
@@ -4427,7 +4543,7 @@ app-d11-special-market .betSlipBox {
 }
 
 .form-select:before {
-  content: '\f107';
+  content: "\f107";
   font: 24px/20px FontAwesome;
   color: #fff;
   position: absolute;
@@ -4444,7 +4560,7 @@ app-d11-special-market .betSlipBox {
 }
 
 .filterRow .form-control:focus {
-  border-color: #E4E7EC;
+  border-color: #e4e7ec;
 }
 
 .filterRow option {
@@ -4526,28 +4642,45 @@ ngx-datatable datatable-header datatable-header-cell:nth-child(1) {
   border-left: none;
 }
 
-ngx-datatable datatable-header datatable-header-cell .datatable-header-cell-template-wrap {
+ngx-datatable
+  datatable-header
+  datatable-header-cell
+  .datatable-header-cell-template-wrap {
   color: #000;
 }
 
-ngx-datatable datatable-header datatable-header-cell .datatable-header-cell-template-wrap .datatable-header-cell-label {
+ngx-datatable
+  datatable-header
+  datatable-header-cell
+  .datatable-header-cell-template-wrap
+  .datatable-header-cell-label {
   display: inline-block;
   position: relative;
   color: #fff !important;
 }
 
-ngx-datatable datatable-header datatable-header-cell .datatable-header-cell-template-wrap .datatable-header-cell-label:after {
+ngx-datatable
+  datatable-header
+  datatable-header-cell
+  .datatable-header-cell-template-wrap
+  .datatable-header-cell-label:after {
   position: absolute;
   top: 1px;
   right: -1.125rem;
 }
 
-ngx-datatable datatable-header datatable-header-cell:first-child .datatable-header-cell-label {
+ngx-datatable
+  datatable-header
+  datatable-header-cell:first-child
+  .datatable-header-cell-label {
   display: inline-block;
   position: relative;
 }
 
-ngx-datatable datatable-header datatable-header-cell:first-child .datatable-header-cell-label:after {
+ngx-datatable
+  datatable-header
+  datatable-header-cell:first-child
+  .datatable-header-cell-label:after {
   position: absolute;
   top: 1px;
   right: -1.125rem;
@@ -4561,7 +4694,7 @@ ngx-datatable datatable-body {
 
 ngx-datatable datatable-body::-webkit-scrollbar-track {
   border-radius: 0.625rem;
-  background: rgba(0, 0, 0, 0.2)
+  background: rgba(0, 0, 0, 0.2);
 }
 
 ngx-datatable datatable-body::-webkit-scrollbar-thumb {
@@ -4598,20 +4731,39 @@ ngx-datatable datatable-body datatable-row-wrapper:nth-of-type(even) {
   background: #e9e9e9;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper datatable-body-row datatable-body-cell {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  datatable-body-row
+  datatable-body-cell {
   padding: 0.5rem 0.75rem;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper datatable-body-row datatable-body-cell a {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  datatable-body-row
+  datatable-body-cell
+  a {
   display: inline-block;
   margin-right: 0.5rem;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper datatable-body-row datatable-body-cell strong {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  datatable-body-row
+  datatable-body-cell
+  strong {
   font-size: 0.875rem;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper datatable-body-row datatable-body-cell .datatable-icon-down {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  datatable-body-row
+  datatable-body-cell
+  .datatable-icon-down {
   display: inline-block;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -4635,38 +4787,82 @@ ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail {
   justify-content: flex-start;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div {
+ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail > div {
   width: 800px;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx-datatable {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  .datatable-row-detail
+  > div
+  ngx-datatable {
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 0;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx-datatable datatable-header {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  .datatable-row-detail
+  > div
+  ngx-datatable
+  datatable-header {
   border-radius: 0px;
   width: 100%;
   padding: 0.5rem 0;
   background: var(--sub-table-bg);
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx-datatable datatable-header datatable-header-cell {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  .datatable-row-detail
+  > div
+  ngx-datatable
+  datatable-header
+  datatable-header-cell {
   text-align: left;
   padding: 0 0.75rem !important;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx-datatable datatable-header datatable-header-cell .datatable-header-cell-template-wrap {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  .datatable-row-detail
+  > div
+  ngx-datatable
+  datatable-header
+  datatable-header-cell
+  .datatable-header-cell-template-wrap {
   color: #042659;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx-datatable datatable-header datatable-header-cell .datatable-header-cell-template-wrap .datatable-header-cell-label {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  .datatable-row-detail
+  > div
+  ngx-datatable
+  datatable-header
+  datatable-header-cell
+  .datatable-header-cell-template-wrap
+  .datatable-header-cell-label {
   display: inline-block;
   position: relative;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx-datatable datatable-header datatable-header-cell .datatable-header-cell-template-wrap .datatable-header-cell-label:after {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  .datatable-row-detail
+  > div
+  ngx-datatable
+  datatable-header
+  datatable-header-cell
+  .datatable-header-cell-template-wrap
+  .datatable-header-cell-label:after {
   content: "";
   font-family: fontawesome;
   position: absolute;
@@ -4674,17 +4870,43 @@ ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx
   right: -1.125rem;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx-datatable datatable-body datatable-row-wrapper {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  .datatable-row-detail
+  > div
+  ngx-datatable
+  datatable-body
+  datatable-row-wrapper {
   background: rgba(255, 255, 255, 0.6);
-  border-bottom: 1px solid #D8D8D8;
+  border-bottom: 1px solid #d8d8d8;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx-datatable datatable-body datatable-row-wrapper datatable-body-row datatable-body-cell {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  .datatable-row-detail
+  > div
+  ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  datatable-body-row
+  datatable-body-cell {
   text-align: left;
   padding-left: 0.75rem;
 }
 
-ngx-datatable datatable-body datatable-row-wrapper .datatable-row-detail>div ngx-datatable datatable-body datatable-row-wrapper datatable-body-row datatable-body-cell strong {
+ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  .datatable-row-detail
+  > div
+  ngx-datatable
+  datatable-body
+  datatable-row-wrapper
+  datatable-body-row
+  datatable-body-cell
+  strong {
   width: 100%;
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -4717,11 +4939,11 @@ ngx-datatable .arrowDown {
 .ngx-datatable .sortable .sort-btn.datatable-icon-up:before,
 .ngx-datatable .sortable .sort-btn:before,
 .ngx-datatable .sortable .sort-btn.datatable-icon-down:before {
-  content: url('../assets/images/sort2.png') !important;
+  content: url("../assets/images/sort2.png") !important;
 }
 
-.profit-loss-status ngx-datatable>div[visibilityobserver],
-.balance-status ngx-datatable>div[visibilityobserver] {
+.profit-loss-status ngx-datatable > div[visibilityobserver],
+.balance-status ngx-datatable > div[visibilityobserver] {
   margin-top: 0px;
 }
 
@@ -4747,7 +4969,7 @@ datatable-body-cell {
   object-fit: contain;
 }
 
-.stepper .nav-tabs>li {
+.stepper .nav-tabs > li {
   width: 33%;
   position: relative;
   text-align: center;
@@ -4844,7 +5066,6 @@ datatable-body-cell:nth-child(1) {
 
 .profileForm {
   background: var(--white-color);
-  ;
   border-radius: 0.625rem;
   overflow: hidden;
 }
@@ -5017,7 +5238,7 @@ datatable-body-cell:nth-child(1) {
 
 .customShowModal .eyeIcon {
   color: #000;
-  top: 0.75rem !important
+  top: 0.75rem !important;
 }
 
 .customShowModal .form-control {
@@ -5129,7 +5350,7 @@ app-d2-term-condition .topHeader {
 }
 
 .hide-print:before {
-  content: '\f02f';
+  content: "\f02f";
   font-family: FontAwesome;
   position: absolute;
   left: 0.625rem;
@@ -5145,7 +5366,7 @@ app-d2-term-condition .topHeader {
 }
 
 .active-box {
-  display: block !important
+  display: block !important;
 }
 
 .blink_med2 {
@@ -5181,7 +5402,13 @@ app-fantasy-gamelist {
   height: 1.125rem;
   width: 6rem;
   animation: gradient 1s linear infinite;
-  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  );
   background-size: 300% 100%;
   border-radius: 0.75rem;
   display: block;
@@ -5198,20 +5425,38 @@ app-fantasy-gamelist {
   height: 16.875rem;
   border-radius: 1rem;
   animation: gradient 1s linear infinite;
-  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  );
   background-size: 300% 100%;
 }
 
 .dummyProvid .proLogo,
 .bganimation {
   animation: gradient 1s linear infinite;
-  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)) !important;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  ) !important;
   background-size: 300% 100%;
 }
 
 .bganimation2 {
   animation: gradient 1s linear infinite;
-  background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)) !important;
+  background-image: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  ) !important;
   background-size: 300% 100%;
 }
 
@@ -5299,7 +5544,7 @@ app-low-bal-currency-info .boxMain {
 }
 
 .slidecontainer .rangeBox .inBox .slider {
-  -webkit-appearance: auto
+  -webkit-appearance: auto;
 }
 
 .needHelp {
@@ -5384,10 +5629,9 @@ app-low-bal-currency-info .boxMain {
   font-size: 0.9rem;
 }
 
-
 .betSlipBox .slipHead .runerText:nth-child(3) .runerName {
   bottom: 0.094rem;
-  line-height: .5rem;
+  line-height: 0.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -5411,17 +5655,17 @@ app-low-bal-currency-info .boxMain {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
-.market-card-preloader .marketNameBox>.bganimation {
+.market-card-preloader .marketNameBox > .bganimation {
   width: 35%;
   height: 1rem;
   border-radius: 1rem;
 }
 
 .main-preloaderdiv .marketList {
-  width: calc(33.33% - .85%);
+  width: calc(33.33% - 0.85%);
 }
 
 .main-preloaderdiv.marketoddRow .bganimation.secTitle {
@@ -5435,15 +5679,15 @@ app-low-bal-currency-info .boxMain {
   padding-right: 2.5rem;
 }
 
-.main-preloaderdiv .dummyswiperbtn>span.bganimation {
+.main-preloaderdiv .dummyswiperbtn > span.bganimation {
   width: 2.8rem;
   height: 2.8rem;
   display: inline-block;
   border-radius: 0.5rem;
 }
 
-.main-preloaderdiv .dummyswiperbtn>span.bganimation:last-child {
-  margin-left: .65rem;
+.main-preloaderdiv .dummyswiperbtn > span.bganimation:last-child {
+  margin-left: 0.65rem;
 }
 
 /* div.whatsappBar.d11Multictic {bottom: 22% !important;}
@@ -5460,7 +5704,7 @@ app-low-bal-currency-info .boxMain {
   line-height: normal;
   position: absolute;
   top: -0.813rem;
-  right: .5px;
+  right: 0.5px;
   font-weight: 600;
   border-radius: 0.125rem;
   font-size: 0;
@@ -5480,7 +5724,7 @@ app-low-bal-currency-info .boxMain {
   animation: smooth-blink 1s infinite;
 }
 
-@media(max-width:1899px) {
+@media (max-width: 1899px) {
   .faqHeading::after {
     width: 68%;
   }
@@ -5488,11 +5732,11 @@ app-low-bal-currency-info .boxMain {
   /* .game-carousel .gameBox img{min-height: 260px;} */
 }
 
-@media(max-width:1799px) {
+@media (max-width: 1799px) {
   /* .game-carousel .gameBox img{min-height: 245px;} */
 }
 
-@media(max-width:1699px) {
+@media (max-width: 1699px) {
   html {
     font-size: 14px;
   }
@@ -5565,11 +5809,9 @@ app-low-bal-currency-info .boxMain {
   .telegramBar.d11Multictic {
     top: 63% !important;
   }
-
 }
 
-@media (max-width:1600px) {
-
+@media (max-width: 1600px) {
   /* .bannerRow .carousel-indicators{height: 54.5%;} */
   .telegramBar.d11Multictic {
     top: 56% !important;
@@ -5596,12 +5838,12 @@ app-low-bal-currency-info .boxMain {
 
   .expBalBtn,
   .avlBalBtn {
-    margin-right: .75rem;
+    margin-right: 0.75rem;
     font-size: 1rem;
   }
 
   .proName {
-    margin-left: .75rem;
+    margin-left: 0.75rem;
   }
 
   .proName .usericon {
@@ -5616,20 +5858,20 @@ app-low-bal-currency-info .boxMain {
   /* USER NAME MAX LENGTHE FOR CSS END */
 }
 
-@media(max-width:1540px) {
+@media (max-width: 1540px) {
   .betSlipBox .slipHead .runerText:nth-child(3) .runerName {
-    line-height: .55rem;
+    line-height: 0.55rem;
   }
 }
 
-@media(max-width:1499px) {
+@media (max-width: 1499px) {
   html {
     font-size: 12px;
   }
 
   /* .game-carousel .gameBox img{min-height: 190px;} */
   .without-announcment .betSlipBox {
-    top: 10rem
+    top: 10rem;
   }
 
   .betSlipBox {
@@ -5643,7 +5885,7 @@ app-low-bal-currency-info .boxMain {
   }
 
   .searchCell {
-    top: 0.5rem
+    top: 0.5rem;
   }
 
   .betSlipBox .slipHead .runerText:nth-child(3) .runerName,
@@ -5673,8 +5915,7 @@ app-low-bal-currency-info .boxMain {
   }
 }
 
-@media(max-width:1399px) {
-
+@media (max-width: 1399px) {
   /* .game-carousel .gameBox img{min-height: 180px;} */
   /* .bannerRow .carousel-indicators{height: 54%;} */
   .telegramBar.d11Multictic {
@@ -5686,8 +5927,7 @@ app-low-bal-currency-info .boxMain {
   }
 }
 
-@media(max-width:1299px) {
-
+@media (max-width: 1299px) {
   /* .game-carousel .gameBox img{min-height: 130px;} */
   ngx-datatable datatable-body {
     height: calc(100dvh - 315px) !important;
@@ -5710,7 +5950,7 @@ app-low-bal-currency-info .boxMain {
   }
 }
 
-@media(max-width:1199px) {
+@media (max-width: 1199px) {
   html {
     font-size: 10px;
   }
@@ -5720,7 +5960,7 @@ app-low-bal-currency-info .boxMain {
   }
 
   .searchCell {
-    top: 1rem
+    top: 1rem;
   }
 
   .bannerRow .carousel-indicators {
@@ -5739,7 +5979,6 @@ app-low-bal-currency-info .boxMain {
 .liveMch::after {
   color: red !important;
 }
-
 
 .dummyPM-Row {
   position: relative;
@@ -5789,7 +6028,8 @@ app-low-bal-currency-info .boxMain {
   font-weight: 800;
 }
 
-.premiumDummy ul {}
+.premiumDummy ul {
+}
 
 .premiumDummy li {
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
@@ -5866,8 +6106,6 @@ app-low-bal-currency-info .boxMain {
 .forcetopassIsssue {
   z-index: 1050 !important;
 }
-
-
 
 .acceptChange {
   text-align: right;
@@ -5972,7 +6210,7 @@ app-low-bal-currency-info .modal {
   transition: all 0.8s;
   right: 0;
   position: absolute;
-  font: 600 .75rem / 1rem var(--font);
+  font: 600 0.75rem / 1rem var(--font);
 }
 
 .whatsapp-CTA a {
@@ -6002,7 +6240,7 @@ app-low-bal-currency-info .modal {
   display: inline-block;
 }
 
-.whatsapp-CTA.telegramIcon>a i {
+.whatsapp-CTA.telegramIcon > a i {
   color: #00a4e0;
   font-size: 59px;
   background: none;
@@ -6105,7 +6343,7 @@ app-d11-slots .aboutRow {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border: 0.063rem solid rgb(0, 0, 0, .2);
+  border: 0.063rem solid rgb(0, 0, 0, 0.2);
   border-bottom: 0;
 }
 
@@ -6134,7 +6372,7 @@ app-d11-slots .aboutRow {
 }
 
 .eventTextLabelPre.bganimation2 {
-  height: .75rem;
+  height: 0.75rem;
   border-radius: 0.625rem;
   width: 30%;
 }
@@ -6256,7 +6494,7 @@ div#ballbyballRules .modal-dialog {
   font: 700 0.875rem / 1.125rem var(--font);
 }
 
-.ballByRow h4>span {
+.ballByRow h4 > span {
   display: flex;
   gap: 0 0.313rem;
   font-size: 0.75rem;
@@ -6294,7 +6532,7 @@ div#ballbyballRules .modal-dialog {
   flex-direction: column;
 }
 
-.ballByRow .minMaxCell>span {
+.ballByRow .minMaxCell > span {
   display: block;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -6384,7 +6622,7 @@ div#ballbyball .modal-title {
 }
 
 .ballByBall ul {
-  margin: 0 0 .5rem;
+  margin: 0 0 0.5rem;
 }
 
 .ballByBall .modal-header {
@@ -6422,8 +6660,8 @@ video#videoFrame {
 }
 
 .remainingRow {
-  background: #F2F3F7;
-  border: 1px solid rgb(0, 0, 0, .2);
+  background: #f2f3f7;
+  border: 1px solid rgb(0, 0, 0, 0.2);
   padding: 8px;
   width: 100%;
   display: flex;
@@ -6553,7 +6791,13 @@ video#videoFrame {
 
 .horseracingGType .dummyEventMain .lastResult li {
   animation: gradient 2s linear infinite;
-  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8));
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.8)
+  );
   background-size: 300% 100%;
 }
 
@@ -6609,7 +6853,8 @@ video#videoFrame {
   font-weight: 600;
 }
 
-#freespin-reload-modal .modal-dialog.modal-dialog-centered.modal-sm.reloadModal {
+#freespin-reload-modal
+  .modal-dialog.modal-dialog-centered.modal-sm.reloadModal {
   max-width: 420px !important;
 }
 
@@ -6628,13 +6873,13 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   bottom: 1rem;
 }
 
-@media(max-width:1650px) {
+@media (max-width: 1650px) {
   .ballByRow .minMaxCell span {
     font-size: 66%;
   }
 }
 
-@media(max-width:1534px) {
+@media (max-width: 1534px) {
   .ballByRow li {
     padding: 0.313rem 0.5rem;
   }
@@ -6644,7 +6889,7 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   }
 }
 
-@media(max-width:1499px) {
+@media (max-width: 1499px) {
   .ballByRow .minMaxCell span {
     font-size: 75%;
   }
@@ -6654,13 +6899,13 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   }
 }
 
-@media(max-width:1399px) {
+@media (max-width: 1399px) {
   .ballByRow .minMaxCell span {
     font-size: 68%;
   }
 
   .ballByRow ul {
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .ballByRow li {
@@ -6668,7 +6913,7 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   }
 }
 
-@media (max-width:1299px) {
+@media (max-width: 1299px) {
   .lastResult li {
     width: 17.8%;
   }
@@ -6676,9 +6921,7 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   .ballByRow .minMaxCell span {
     font-size: 65%;
   }
-
 }
-
 
 .luckyFooter {
   color: #ffff;
@@ -6689,11 +6932,11 @@ div#sessionCheck .modal-content.popimgcoin h4 {
 }
 
 .luckyFooter .gamblogoRow span {
-  padding: 0 .25rem;
+  padding: 0 0.25rem;
 }
 
 .footer_apkDownload {
-  padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 
 .luckyFooter .gambLogos p {
@@ -6701,7 +6944,7 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   font: 400 1.125rem / 1.625rem var(--font);
 }
 
-.luckyFooter .gamblogoRow span>img {
+.luckyFooter .gamblogoRow span > img {
   height: 1.5rem !important;
 }
 
@@ -6709,12 +6952,10 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   max-width: 70%;
 }
 
-
-
 .footerSocialLInk a {
   font: 600 1.6rem / 1.375rem var(--font);
   text-decoration: none;
-  margin: 1.5rem .5rem 0;
+  margin: 1.5rem 0.5rem 0;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -6734,8 +6975,15 @@ div#sessionCheck .modal-content.popimgcoin h4 {
 }
 
 .footerSocialLInk .instagramBar a {
-  color: rgba(255, 255, 255, .5);
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: rgba(255, 255, 255, 0.5);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 
 .footerSocialLInk .telegramBar a .fa::before {
@@ -6743,14 +6991,11 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   font-family: "Font Awesome 5 Brands";
 }
 
-
-
-
 .providerCol.liveCasino {
   min-height: 9.75rem;
 }
 
-.profileSec .expanddiv>.stepper>.nav-tabs>li>.persistant-disabled {
+.profileSec .expanddiv > .stepper > .nav-tabs > li > .persistant-disabled {
   pointer-events: none;
 }
 
@@ -6980,14 +7225,11 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   align-content: center;
 }
 
-@media(max-width:420px) {
+@media (max-width: 420px) {
   .freeSpin .modal-dialog {
     width: 94%;
   }
 }
-
-
-
 
 .dummyEventMain .bookHead {
   min-height: 2.25rem;
@@ -7000,18 +7242,23 @@ div#sessionCheck .modal-content.popimgcoin h4 {
 .dummyEventMain .bookHead,
 .dummyEventMain .eventTextLabelPre {
   animation: gradient 1s linear infinite;
-  background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
   background-size: 300% 100%;
 }
 
 .dummyEventMain .bookeventName .eventTextLabelPre {
-  height: .75rem;
+  height: 0.75rem;
   border-radius: 0.625rem;
   width: 20%;
 }
 
 @keyframes smooth-blink {
-
   0%,
   100% {
     opacity: 1;
@@ -7026,15 +7273,14 @@ div#sessionCheck .modal-content.popimgcoin h4 {
   animation: smooth-blink 1.25s infinite;
 }
 
-
 .vidIcon {
-  padding: .25rem .5rem !important;
+  padding: 0.25rem 0.5rem !important;
   display: inline-flex;
   align-items: center;
   margin: -2px 0 0 5px !important;
   font-size: 0.75rem;
-  border: 1px solid rgba(0, 0, 0, .2);
-  color: rgba(0, 0, 0, .2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
   background: none;
   border-radius: 3px;
 }
@@ -7125,7 +7371,7 @@ div#sessionCheck .modal-content.popimgcoin h4 {
 .lppProgCell .progressBar {
   width: 90%;
   background: var(--primary);
-  border: 1px solid rgba(0, 0, 0, .5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 0.75rem #000;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -7142,7 +7388,6 @@ div#sessionCheck .modal-content.popimgcoin h4 {
 .lppShow .dwonArrow {
   transform: rotate(180deg);
 }
-
 
 .withOutProgress {
   display: flex;
@@ -7220,7 +7465,7 @@ ol.lppDataRow .lpText,
 
 ol.lppDataRow .expText {
   font-size: 0.5rem;
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
 }
 
@@ -7255,7 +7500,13 @@ ol.lppDataRow .btn-Redeem {
 .blinkBack,
 .blinkLay {
   animation: gradientMove 1s linear infinite;
-  background-image: linear-gradient(600deg, transparent, rgba(255, 253, 255, 0.8), transparent, rgba(255, 255, 255, 0.8));
+  background-image: linear-gradient(
+    600deg,
+    transparent,
+    rgba(255, 253, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.8)
+  );
   background-size: 100% 800%;
 }
 
@@ -7267,10 +7518,10 @@ ol.lppDataRow .btn-Redeem {
 }
 
 .withdrawcrypttext .btn {
-  background: #CDCDCD;
+  background: #cdcdcd;
   font: 700 1.5rem / 2rem var(--font);
   padding: 0.625rem 1rem !important;
-  margin: 1.5rem 0 .5rem;
+  margin: 1.5rem 0 0.5rem;
 }
 
 .copytbtn {
@@ -7280,16 +7531,16 @@ ol.lppDataRow .btn-Redeem {
 
 .iswithdrawsec h6 {
   margin: 0;
-  color: #08182F;
+  color: #08182f;
   font: 600 1.25rem / 1.8rem var(--font);
-  padding-right: .75rem;
+  padding-right: 0.75rem;
 }
 
 .barcodeBtns {
   border: 0;
   padding: 0.875rem 1.5rem;
   border-radius: 0.5rem;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
@@ -7336,7 +7587,6 @@ ol.lppDataRow .btn-Redeem {
   margin-left: 0.313rem;
 }
 
-
 /* ******** GROUPING CSS START ********* */
 .spNorecoard {
   text-align: center;
@@ -7347,7 +7597,7 @@ ol.lppDataRow .btn-Redeem {
 
 .premium_book_tab .dropdowm-mores {
   z-index: 2;
-  box-shadow: 0px 0px 0.625rem rgba(0, 0, 0, .2);
+  box-shadow: 0px 0px 0.625rem rgba(0, 0, 0, 0.2);
   padding: 0;
   min-width: 9rem;
   background: #000002;
@@ -7359,12 +7609,12 @@ ol.lppDataRow .btn-Redeem {
 .premium_book_tab .dropdowm-mores a {
   display: block;
   font: 600 0.75rem / 0.875rem var(--font);
-  padding: 0.5rem .5rem;
+  padding: 0.5rem 0.5rem;
   color: var(--white-color);
   border-bottom: 1px solid var(--secondary);
 }
 
-.sportbookTabs>ul {
+.sportbookTabs > ul {
   display: flex;
   gap: 0.25rem 0.313rem;
   flex-wrap: wrap;
@@ -7379,8 +7629,8 @@ ol.lppDataRow .btn-Redeem {
 }
 
 .sportbookTabs ul li a {
-  padding: 0.125rem .7rem 0.125rem .6rem;
-  color: rgba(255, 255, 255, .4) !important;
+  padding: 0.125rem 0.7rem 0.125rem 0.6rem;
+  color: rgba(255, 255, 255, 0.4) !important;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
@@ -7406,7 +7656,7 @@ ol.lppDataRow .btn-Redeem {
   position: absolute;
   top: -7%;
   content: "";
-  background: rgb(255, 255, 255, .4);
+  background: rgb(255, 255, 255, 0.4);
   right: -0.125rem;
 }
 
@@ -7424,7 +7674,6 @@ ol.lppDataRow .btn-Redeem {
 }
 
 /* ******** GROUPING CSS END ********* */
-
 
 /* In-Play sprots filter */
 .inPlayFilter {
@@ -7444,10 +7693,10 @@ ol.lppDataRow .btn-Redeem {
   font-size: 1.5rem;
   line-height: 2rem;
   height: 100%;
-  padding:0.995rem 0.1rem 0.875rem 0.1rem;
+  padding: 0.995rem 0.1rem 0.875rem 0.1rem;
   color: #000;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, .1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   top: -0.313rem;
   cursor: pointer;
@@ -7571,7 +7820,7 @@ ol.lppDataRow .btn-Redeem {
 /* ******** GROUPING CSS END ********* */
 .fancyList.premiumRow .premiumRowTitle {
   min-width: 50%;
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }
 
 .khado_marketss .favicon {
@@ -7579,7 +7828,7 @@ ol.lppDataRow .btn-Redeem {
   left: 42.75%;
 }
 
-@media(max-width:1600px) {
+@media (max-width: 1600px) {
   .khado_marketss .favicon {
     left: 42.5%;
   }
@@ -7588,7 +7837,6 @@ ol.lppDataRow .btn-Redeem {
     top: 52% !important;
   }
 }
-
 
 /* Coin Toss style */
 .coinTossGM app-player-ballbyball-detail {
@@ -7634,12 +7882,12 @@ ol.lppDataRow .btn-Redeem {
   width: 30%;
   display: flex;
   border: 0.063rem solid rgba(0, 0, 0, 0.5);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   justify-content: center;
-  padding: 0 .25rem;
+  padding: 0 0.25rem;
   align-items: center;
   min-height: 2.25rem;
-  font: 500 .75rem / 0.875rem var(--font);
+  font: 500 0.75rem / 0.875rem var(--font);
 }
 
 .range-container {
@@ -7651,13 +7899,13 @@ ol.lppDataRow .btn-Redeem {
   width: 36%;
   border-color: #39b44a;
   background: #fff;
-  padding: 0.125rem .75rem;
+  padding: 0.125rem 0.75rem;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
 .range-active span {
-  padding: .4rem .5rem;
+  padding: 0.4rem 0.5rem;
   font-weight: normal;
   font-size: 100%;
 }
@@ -7694,9 +7942,7 @@ ol.lppDataRow .btn-Redeem {
   border-radius: 50%;
 }
 
-
 /*  ========= PENALTY SHOOT START  =========  */
-
 
 .paneltyShootGType .lastResult li.paneltyRedball {
   background: url("../assets/images/ballBGRed.png") no-repeat;
@@ -7760,7 +8006,7 @@ ol.lppDataRow .btn-Redeem {
   background: transparent;
   color: #333333;
   flex-direction: column;
-  font-size: .75rem;
+  font-size: 0.75rem;
   cursor: inherit;
 }
 
@@ -7796,7 +8042,7 @@ ol.lppDataRow .btn-Redeem {
   text-transform: uppercase;
   position: absolute;
   left: 0.0625rem;
-  top: -.5rem;
+  top: -0.5rem;
 }
 
 .paneltyShootGType .teamsGoalMain .team-image img {
@@ -7810,7 +8056,7 @@ ol.lppDataRow .btn-Redeem {
 
 .teams-goal-result {
   width: 16%;
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 0.5rem;
   color: #fff;
   font-size: 1.125rem;
@@ -7849,7 +8095,7 @@ ol.lppDataRow .btn-Redeem {
   width: 100%;
   border: 0;
   border-radius: 0;
-  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.2)
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.2);
 }
 
 .paneltyShootGType .ballByRow ul li:last-child {
@@ -7949,11 +8195,11 @@ div#penaltyshootRules .modal-title,
   margin-top: 3rem;
 }
 
-.paneltyShootGType .ballByRow ul li h4>span {
+.paneltyShootGType .ballByRow ul li h4 > span {
   margin-top: 0;
 }
 
-@media(max-width:1680px) {
+@media (max-width: 1680px) {
   .paneltyShootGType .lastResult li.cursor-None {
     width: 28px;
     height: 28px;
@@ -7962,11 +8208,7 @@ div#penaltyshootRules .modal-title,
 
 /*  ========= PENALTY SHOOT END  =========  */
 
-
-
-
-
-@media(max-width:1399px) {
+@media (max-width: 1399px) {
   .coinResult {
     padding: 1.875rem 1.5rem;
     gap: 1rem;
@@ -7978,9 +8220,6 @@ div#penaltyshootRules .modal-title,
 }
 
 /* End Coin Toss style */
-
-
-
 
 /* ********** new score card start  **********  */
 .ice-score-card-main {
@@ -7997,7 +8236,7 @@ div#penaltyshootRules .modal-title,
   justify-content: center;
 }
 
-@media(max-width:1600px) {
+@media (max-width: 1600px) {
   .ice-score-card-main .ice-score-card-container .ice-score-teams-name {
     width: 72% !important;
   }
@@ -8009,10 +8248,10 @@ div#penaltyshootRules .modal-title,
 }
 
 .enableclick {
-  color: #3BB9FF;
+  color: #3bb9ff;
 }
 
-@media(max-width:1600px) {
+@media (max-width: 1600px) {
   .boxingGame .ifream {
     height: 100dvh !important;
   }
@@ -8065,13 +8304,12 @@ div#penaltyshootRules .modal-title,
 
 /* ******* NEPALI & BENGALI LANGUNAGE CSS END ******** */
 
-
 .Parkerexch_20231181 .loginModal .loginLogo {
-  height: 80px !important
+  height: 80px !important;
 }
 
 .Parkerexch_20231181 .logoCol {
-  height: 50px !important
+  height: 50px !important;
 }
 
 .Sat365_20231183 .loginModal .loginLogo img {
@@ -8106,7 +8344,6 @@ app-d11-profit-loss .ngx-datatable .pointdisb {
   height: 130% !important;
 }
 
-
 .ball-bookMaker .suspended.lay,
 .suspended-BM.lay {
   width: 49.5% !important;
@@ -8128,8 +8365,6 @@ app-d11-profit-loss .ngx-datatable .pointdisb {
 .Chakra247_20231196 .loginModal .loginLogo img {
   height: 170% !important;
 }
-
-
 
 .mainTabs {
   margin: 5px 0px 15px;
@@ -8213,14 +8448,254 @@ app-d11-profit-loss .ngx-datatable .pointdisb {
 }
 
 /* Sports page css */
-.without-announcment .betSlipBox{top: 8.6rem; height: calc(100dvh - 8.6rem)!important;}
-app-player-fantasy .announcebar, app-player-fantasy .backRow{margin: 0 -2.2%; width: 102.2%;}
-.playerDasbord{position: relative; padding-bottom: 0;}
-.eventMain{width: 70%; padding: 0 1rem; height: calc(100dvh - 11.4rem); overflow-x: auto;}
-.backTab .fa{font-size: 1.8rem; margin-top: -0.165rem;}
-.marketFlex{background: #fff;}
-.marketFlex .eventMain{width: 70%;}
-.inPlayTab li::before{ content: ''; top:0.25rem; left: 0; position: absolute; width: 1px; height: 30px; background: rgba(0,0,0,0.2); display: block;}
-.inPlayTab li:first-child::before{display: none;}
-.inPlayTab li .inTab{ padding: 0.675rem 0; display: block; text-align: center; font:700 1.125rem/1.125rem var(--font); text-transform: uppercase; text-decoration: none; border-bottom: 0.313rem solid transparent; color:rgba(0,0,0,0.8);}
-.inPlayTab li .active{ border-bottom: 3px solid rgba(0,0,0,0.8);}
+.without-announcment .betSlipBox {
+  top: 8.6rem;
+  height: calc(100dvh - 8.6rem) !important;
+}
+app-player-fantasy .announcebar,
+app-player-fantasy .backRow {
+  margin: 0 -2.2%;
+  width: 102.2%;
+}
+.playerDasbord {
+  position: relative;
+  padding-bottom: 0;
+}
+.eventMain {
+  width: 70%;
+  padding: 0 1rem;
+  height: calc(100dvh - 11.4rem);
+  overflow-x: auto;
+}
+.backTab .fa {
+  font-size: 1.8rem;
+  margin-top: -0.165rem;
+}
+.marketFlex {
+  background: #fff;
+}
+.marketFlex .eventMain {
+  width: 70%;
+}
+.inPlayTab li::before {
+  content: "";
+  top: 0.25rem;
+  left: 0;
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+}
+.inPlayTab li:first-child::before {
+  display: none;
+}
+.inPlayTab li .inTab {
+  padding: 0.675rem 0;
+  display: block;
+  text-align: center;
+  font: 700 1.125rem/1.125rem var(--font);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 0.313rem solid transparent;
+  color: rgba(0, 0, 0, 0.8);
+}
+.inPlayTab li .active {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.8);
+}
+.betSlipModal {
+  position: fixed;
+  /* display: none; */
+  bottom: 64px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1000px) {
+  .betSlipModal {
+    display: none;
+  }
+}
+.betSlipModal .slipHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 0;
+  min-height: 45px;
+  position: relative;
+}
+.betSlipModal .titleBG {
+  min-width: 80px;
+  min-height: 45px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.betSlipModal .bg-pink {
+  background: #ffcfe5;
+}
+.betSlipModal .bg-pink .titleBG {
+  background: #ffa0d0;
+}
+.betSlipModal .bg-blue {
+  background: #bcddff;
+}
+.betSlipModal .bg-blue .titleBG {
+  background: #8ec5fe;
+}
+.betSlipModal .slipHead h3 {
+  font: 700 14px / 13px var(--font);
+  margin: 0;
+  text-transform: uppercase;
+}
+.betSlipModal .slipHead .runerText {
+  flex: auto;
+  padding: 0 10px;
+  margin-top: -16px;
+}
+.betSlipModal .slipHead .runerText .runerName {
+  display: block;
+}
+.betSlipModal .slipHead .markText {
+  position: absolute;
+  left: 90px; /*bottom: 0; width: 42%;*/
+  bottom: 0.188rem;
+  width: 50%;
+  height: 14px;
+}
+.betSlipModal .slipHead .markText span {
+  /*font-size: 10px;*/
+  font-size: 9px;
+  line-height: 8px;
+  width: 100%;
+  display: block;
+}
+.betSlipModal .slipHead .profitsCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font: 600 14px / 18px var(--font);
+}
+.betSlipModal .maxminbet {
+  background: #2c2c2c;
+  min-height: 38px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+}
+.betSlipModal .maxminT {
+  font: 600 14px / 18px var(--font);
+  color: #fff;
+}
+.betSlipModal .oddStakeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+  padding: 12px 10px;
+}
+.betSlipModal .oddCol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+  width: 42%;
+}
+.betSlipModal .col-form-label {
+  font: 500 12px/16px var(--font);
+}
+.betSlipModal .inputCell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 5px;
+}
+.betSlipModal .inputCell .inputBTN {
+  background: #000;
+  border: none;
+  width: 15px;
+  height: 26px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0 3px;
+  color: #fff;
+}
+.betSlipModal .form-control {
+  height: 26px;
+  background: none;
+  border-radius: 4px;
+  text-align: center;
+  width: 65%;
+  font-size: 12px;
+  font-weight: 500;
+}
+.betSlipModal .stakeCol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 5px;
+  width: 50%;
+}
+.betSlipModal .stakeCol .form-control {
+  width: 100%;
+}
+.betSlipModal .betPriceVal {
+  padding: 0 10px;
+}
+.betSlipModal .betPriceVal ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.betSlipModal .betPriceVal ul li {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  font: 600 12px/28px var(--font);
+  width: 22.5%;
+  min-height: 30px;
+}
+.betSlipModal .betPriceVal ul li:last-child {
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+}
+.betSlipModal .slipbtnRow {
+  margin-top: 12px;
+  padding: 12px 10px 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 5px;
+}
+.betSlipModal .slipbtnRow .cancelCol,
+.betSlipModal .slipbtnRow .placeBetCol {
+  width: 49%;
+}
+.betSlipModal .slipbtnRow .btn {
+  width: 100%;
+  height: 36px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.betSlipModal .slipbtnRow .btn-danger {
+  background: #ff0000;
+  border-color: #ff0000;
+}
+.betSlipModal .slipbtnRow .btn-success {
+  background: #39b44a;
+  border-color: #39b44a;
+}

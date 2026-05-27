@@ -10,6 +10,7 @@ import { Settings } from "../../api";
 import MatchOdds from "../../components/modules/EventDetails/MatchOdds";
 import Bookmaker from "../../components/modules/EventDetails/Bookmaker";
 import Fancy from "../../components/modules/EventDetails/Fancy";
+import BetSLip from "../../components/modules/EventDetails/BetSLip";
 
 const EventDetails = () => {
   const [tab, setTab] = useState("all");
@@ -186,11 +187,13 @@ const EventDetails = () => {
               <div className="headSlip">
                 <span className="headText">Bet Slip</span>
               </div>
-              <div />
-              <div className="empty_message text-black">
-                <img src="./index_files/empty-cart.png" />
-                Click on the odds to add selections to the betslip
-              </div>
+              {placeBetValues && <BetSLip />}
+              {!placeBetValues && (
+                <div className="empty_message text-black">
+                  <img src="/assets/empty-cart.png" />
+                  Click on the odds to add selections to the betslip
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -1,7 +1,11 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import useBalance from "../../../hooks/balance";
+import { logout } from "../../../redux/features/auth/authSlice";
 
 const Dropdown = ({ showDropdown, setShowDropdown }) => {
+  const dispatch = useDispatch();
+  const { data } = useBalance();
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
 
@@ -9,6 +13,7 @@ const Dropdown = ({ showDropdown, setShowDropdown }) => {
     navigate(link);
     setShowDropdown(false);
   };
+
   return (
     <div
       className={`profileRow scale-up-ver-top ${showDropdown ? "active-box" : ""}`}
@@ -43,19 +48,17 @@ const Dropdown = ({ showDropdown, setShowDropdown }) => {
       <ul className="accountDetail">
         <li>
           {" "}
-          Available Balance <span className="numText"> 0.30</span>
+          Available Balance{" "}
+          <span className="numText"> {data?.availBalance}</span>
         </li>
 
         <li>
-          <span className="bonCell"> Wallet Balance</span>
-
-          <span className="numText"> 0.00</span>
-        </li>
-        <li>
-          Loosing <span className="numText negativeValue"> -949.70 </span>
-        </li>
-        <li>
-          Exposure <span className="numText negativeValue">50.00</span>
+          Exposure{" "}
+          <span
+            className={`numText  ${data?.deductedExposure > 0 ? "positiveValue" : "negativeValue"}`}
+          >
+            {data?.deductedExposure}
+          </span>
         </li>
       </ul>
       <ul className="accountTabs">
@@ -96,7 +99,9 @@ const Dropdown = ({ showDropdown, setShowDropdown }) => {
           App Only Bonus
         </li>
 
-        <li className="logoutBtn">Logout</li>
+        <li onClick={() => dispatch(logout())} className="logoutBtn">
+          Logout
+        </li>
       </ul>
     </div>
   );

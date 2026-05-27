@@ -139,7 +139,6 @@ const Header = () => {
                 </div>
               </div>
               {!token && <Unauthorized />}
-
               {token && <Authorized />}
             </div>
           </div>

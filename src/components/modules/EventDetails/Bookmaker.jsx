@@ -8,9 +8,9 @@ import {
 } from "../../../redux/features/events/eventSlice";
 import toast from "react-hot-toast";
 import { Settings } from "../../../api";
-import BetSLip from "./BetSLip";
 import { handleCashOutPlaceBet } from "../../../utils/handleCashoutPlaceBet";
 import SpeedCashOut from "../../modals/SpeedCashOut/SpeedCashOut";
+import BetSlip from "./BetSLip";
 
 const Bookmaker = ({ data }) => {
   const [speedCashOut, setSpeedCashOut] = useState(null);
@@ -351,8 +351,31 @@ const Bookmaker = ({ data }) => {
                     return (
                       <Fragment key={runner?.id}>
                         <div className="oddsList ">
-                          <div className="runnerName">
+                          <div
+                            className="runnerName"
+                            style={{ display: "flex", gap: "4px" }}
+                          >
                             <h3 className="vsName">{runner?.name}</h3>
+                            {pnl && (
+                              <span
+                                className={`${
+                                  pnl?.pnl > 0 ? "text-success" : "text-danger"
+                                }`}
+                              >
+                                {pnl?.pnl}
+                              </span>
+                            )}
+                            {stake && runnerId && predictOddValues && (
+                              <span
+                                className={` ${
+                                  predictOddValues?.exposure > 0
+                                    ? "text-success"
+                                    : "text-danger"
+                                } `}
+                              >
+                                &nbsp;({predictOddValues?.exposure})
+                              </span>
+                            )}
                           </div>
                           <ul className="oddsRow runnerOdds">
                             <li
@@ -439,9 +462,17 @@ const Bookmaker = ({ data }) => {
                               {runner?.lay?.[2]?.price}{" "}
                               <small>{runner?.lay?.[2]?.size} </small>
                             </li>
-                            <div className="suspended ">Suspended</div>
+                            {runner?.status === "SUSPENDED" && (
+                              <div className="suspended ">Suspended</div>
+                            )}
                           </ul>
                         </div>
+                        {runner?.id === runnerId && (
+                          <div className="betSlipModal">
+                            {" "}
+                            <BetSlip currentPlaceBetEvent={game} />
+                          </div>
+                        )}
                       </Fragment>
                     );
                   })}

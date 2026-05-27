@@ -5,11 +5,14 @@ import { Settings } from "../api";
 import Header from "../components/UI/Header/Header";
 import LeftSidebar from "../components/UI/LeftSidebar/LeftSidebar";
 import Login from "../components/modals/Login/Login";
+import Register from "../components/modals/Register/Register";
 
 const MainLayout = () => {
   const [, setShowBuildVersion] = useState(false);
   const stored_build_version = localStorage.getItem("build_version");
-  const { group, showLoginModal } = useSelector((state) => state.global);
+  const { group, showLoginModal, showRegisterModal } = useSelector(
+    (state) => state.global,
+  );
   const location = useLocation();
   const ref = useRef();
 
@@ -39,6 +42,7 @@ const MainLayout = () => {
   return (
     <div style={{ overflow: "hidden" }}>
       {showLoginModal && <Login />}
+      {showRegisterModal && <Register />}
       <div>
         <div className="bodyBG">
           <div className="mainRow">

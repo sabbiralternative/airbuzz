@@ -19,8 +19,8 @@ import {
   handleDecreasePrice,
   handleIncreasePrice,
 } from "../../../utils/editBetSlipPrice";
-import Loader from "../../shared/Loader/Loader";
-const BetSLip = ({ currentPlaceBetEvent }) => {
+
+const BetSlip = ({ currentPlaceBetEvent }) => {
   const { closePopupForForever } = useSelector((state) => state.global);
   const [isCashOut, setIsCashOut] = useState(false);
   const [profit, setProfit] = useState(0);
@@ -211,206 +211,177 @@ const BetSLip = ({ currentPlaceBetEvent }) => {
       dispatch(setStake(buttonValue + prevStake));
     }
   };
-  return (
-    <div
-      data-v-01cb3fd9
-      className={`bettingTable  ${placeBetValues?.back ? "blue-back" : "pink-lay"}`}
-      style={{}}
-    >
-      {loading && <Loader />}
-      {/* <div data-v-a3bfde67 className="betslip-outer-div">
-        <div data-v-a3bfde67 className="bet-any-odds-sec">
-          <div data-v-a3bfde67 className="other-settings-switch">
-            <div data-v-a3bfde67 className="toggle">
-              <input data-v-a3bfde67 type="checkbox" id="acceptOddsToggle" />
-              <label data-v-a3bfde67 htmlFor="acceptOddsToggle" />
-            </div>
-          </div>
-          <span data-v-a3bfde67>Accept any odds</span>
-        </div>
-        
-        <p data-v-a3bfde67 className="fancy-minMax-bet">
-          Aval Bal : &nbsp;
-          <span data-v-a3bfde67 className="text-green">
-            0.21
-          </span>
-        </p>
-      </div> */}
-      <div data-v-a3bfde67 className="bet-left-side" />
-      <div data-v-a3bfde67 className="bets-right-side">
-        <div data-v-a3bfde67 className="card-bet select-value-btn">
-          <div data-v-a3bfde67 className="bets-btn">
-            <div data-v-a3bfde67 className="increment-decrement-sec">
-              {!placeBetValues?.isWeak && (
-                <div
-                  onClick={() => {
-                    handleDecreasePrice(
-                      price,
-                      placeBetValues,
-                      dispatch,
-                      setPrice,
-                    );
-                    setIsCashOut(false);
-                  }}
-                  data-v-a3bfde67
-                  className="value-button v-left"
-                  id="decrease"
-                  value="Decrease Value"
-                >
-                  <img
-                    data-v-a3bfde67
-                    loading="lazy"
-                    src="/assets/betButtonMinus-D2IIXrqQ.svg"
-                  />
-                </div>
-              )}
 
-              <div data-v-a3bfde67 className="select-digit">
-                <input
-                  onChange={(e) => {
-                    dispatch(setPrice(e.target.value));
-                    setIsCashOut(false);
-                  }}
-                  value={price}
-                  data-v-a3bfde67
-                  type="number"
-                  className="form-control"
-                  id="number"
-                />
-              </div>
-              {!placeBetValues?.isWeak && (
-                <div
-                  onClick={() => {
-                    handleIncreasePrice(
-                      price,
-                      placeBetValues,
-                      dispatch,
-                      setPrice,
-                    );
-                    setIsCashOut(false);
-                  }}
-                  data-v-a3bfde67
-                  className="value-button"
-                  id="increase"
-                  value="Increase Value"
-                >
-                  <img
-                    data-v-a3bfde67
-                    loading="lazy"
-                    src="/assets/betButtonPlus-BQuXQGw7.svg"
-                  />
-                </div>
-              )}
+  return (
+    <div className="betBox swing-in-top-bck ng-star-inserted relative">
+      {loading && (
+        <div className="absolute top-0 left-0 flex flex-col gap-1 items-center justify-center w-full h-full z-20 bg-black/30 backdrop-blur-[2px]">
+          <div className="relative h-[70px] w-[70px] flex items-center justify-center">
+            <div className="absolute text-lg text-white"></div>
+            <div className="h-[80%] w-[80%] border-4 border-white rounded-full border-dotted border-t-white border-b-oneClickLoadingSpinner border-x-oneClickLoadingSpinner animate-oneClickLoadingSpinnerAnimation" />
+          </div>
+          <div className="flex flex-col items-center justify-center text-white">
+            <div className="text-sm font-semibold">
+              Your bet is being processed...
             </div>
-            <div
-              data-v-a3bfde67
-              className="increment-decrement-sec bet-mobile-show"
-            >
-              {/* <div
-                data-v-a3bfde67
-                className="value-button v-left"
-                id="decrease"
-                value="Decrease Value"
-              >
-                <img
-                  data-v-a3bfde67
-                  loading="lazy"
-                  src="/assets/betButtonMinus-D2IIXrqQ.svg"
-                />
-              </div> */}
-              <div data-v-a3bfde67 className="select-digit">
-                <input
-                  data-v-a3bfde67
-                  onChange={(e) => {
-                    dispatch(setStake(e.target.value));
-                    setIsCashOut(false);
-                  }}
-                  placeholder={`Max bet: ${placeBetValues?.maxLiabilityPerBet}`}
-                  value={stake || ""}
-                  className="form-control mbetting-table-none"
-                />
-              </div>
-              {/* <div
-                data-v-a3bfde67
-                className="value-button"
-                id="increase"
-                value="Increase Value"
-              >
-                <img
-                  data-v-a3bfde67
-                  loading="lazy"
-                  src="/assets/betButtonPlus-BQuXQGw7.svg"
-                />
-              </div> */}
-            </div>
+            <div className="text-xs text-suspendedBg">Please wait</div>
+          </div>
+        </div>
+      )}
+      <div
+        className={`slipHead   ${placeBetValues?.back ? "bg-blue" : "bg-pink"}`}
+        id="slip-0"
+      >
+        <h3 className="titleBG ng-star-inserted">
+          {placeBetValues?.back ? "Back" : "Lay"}
+        </h3>
+
+        <h3 className="runerText ng-star-inserted">
+          <span className="runerName">{placeBetValues?.selectedBetName}</span>
+        </h3>
+        <h3 className="runerText ng-star-inserted">
+          <span className="runerName ng-star-inserted">
+            {placeBetValues?.marketName}
+          </span>
+        </h3>
+        <h3 className="runerText"></h3>
+
+        <div className="profitsCol ng-star-inserted">
+          Profit:
+          <span className="tgreen">{profit}</span>
+        </div>
+      </div>
+
+      <div className="maxminbet ng-star-inserted">
+        <span className="maxminT">
+          {" "}
+          Maximum Bet : {placeBetValues?.maxLiabilityPerBet}
+        </span>
+        {/* <span className="maxminT hide-Maxstake">
+          Maximum Bet : {placeBetValues?.maxLiabilityPerBet}
+        </span> */}
+      </div>
+      <div className="oddStakeRow">
+        <div className="oddCol">
+          <label className="col-form-label">Odds</label>
+          <div className="inputCell">
+            {!placeBetValues?.isWeak && (
+              <input
+                onClick={() => {
+                  handleDecreasePrice(
+                    price,
+                    placeBetValues,
+                    dispatch,
+                    setPrice,
+                  );
+                  setIsCashOut(false);
+                }}
+                className="inputBTN leftBtn"
+                type="button"
+                defaultValue="-"
+              />
+            )}
+
+            <input
+              className="form-control ng-untouched ng-pristine ng-valid ng-star-inserted"
+              onChange={(e) => {
+                dispatch(setPrice(e.target.value));
+                setIsCashOut(false);
+              }}
+              value={price}
+              type="text"
+              id="bet-slip-0"
+            />
+            {!placeBetValues?.isWeak && (
+              <input
+                onClick={() => {
+                  handleIncreasePrice(
+                    price,
+                    placeBetValues,
+                    dispatch,
+                    setPrice,
+                  );
+                  setIsCashOut(false);
+                }}
+                className="inputBTN rightBtn"
+                type="button"
+                defaultValue="+"
+              />
+            )}
+          </div>
+        </div>
+        <div className="stakeCol">
+          <label className="col-form-label">Stake</label>
+          <input
+            autoComplete="off"
+            className="form-control ng-untouched ng-pristine"
+            maxLength={8}
+            type="text"
+            id="bet-stake-0"
+            onChange={(e) => {
+              dispatch(setStake(e.target.value));
+              setIsCashOut(false);
+            }}
+            placeholder={`Max bet: ${placeBetValues?.maxLiabilityPerBet}`}
+            value={stake || ""}
+          />
+          {/* <button className="btn btn-sm stakeleftAr">
+            <i aria-hidden="true" className="fa fa-angle-left" />
+          </button> */}
+          <div className="dropdown">
+            <div className="dropdown-content" id="myDropdown"></div>
           </div>
         </div>
       </div>
-      <div data-v-a3bfde67 className="place-bet">
-        <ul data-v-a3bfde67 className="stakesBtns mbetting-table-none">
+      <div className="betPriceVal">
+        <ul>
           {parseButtonValues?.slice(0, 6)?.map((button, i) => (
             <li
               key={i}
               onClick={() => handleButtonValue(button?.value)}
-              data-v-a3bfde67
+              className="proceboxblue ng-star-inserted"
             >
-              <button data-v-a3bfde67 className="btn">
-                {button?.value}
-              </button>
+              +{button?.value}
             </li>
           ))}
+
+          <li
+            onClick={() =>
+              dispatch(
+                setStake(
+                  parseButtonValues?.[parseButtonValues?.length - 1]?.value,
+                ),
+              )
+            }
+            className="maxBet"
+          >
+            Max
+          </li>
         </ul>
       </div>
-      <div data-v-a3bfde67 className="m_stakesBtns">
-        <button
-          onClick={() => dispatch(setStake(parseButtonValues[0]?.value))}
-          data-v-a3bfde67
-          className="btn min-btn"
-        >
-          Min
-        </button>
-        <button
-          onClick={() =>
-            dispatch(
-              setStake(
-                parseButtonValues?.[parseButtonValues?.length - 1]?.value,
-              ),
-            )
-          }
-          data-v-a3bfde67
-          className="btn max-btn"
-        >
-          Max
-        </button>
 
-        <button
-          onClick={() => {
-            dispatch(setStake(null));
-          }}
-          data-v-a3bfde67
-          className="btn clear-btn"
-        >
-          Clear
-        </button>
-      </div>
-      <div data-v-a3bfde67 className="mobilebet-btn">
-        <button
-          onClick={handleCancelBet}
-          data-v-a3bfde67
-          className="btn btn-cancel"
-        >
-          Cancel
-        </button>
-        <button
-          onClick={handleOrderBets}
-          data-v-a3bfde67
-          className="btn btn-betplace filled-stake"
-        >
-          Place Bet
-        </button>
+      <div className="slipbtnRow">
+        <div className="cancelCol">
+          <input
+            onClick={handleCancelBet}
+            className="btn btn-danger text-deng"
+            type="button"
+            defaultValue="Cancel"
+          />
+        </div>
+
+        <div className="placeBetCol ng-star-inserted">
+          <input
+            onClick={handleOrderBets}
+            className="btn btn-success ng-star-inserted"
+            id="oddBets"
+            type="button"
+            defaultValue="PLACE BET ✓"
+          />
+        </div>
       </div>
     </div>
   );
 };
 
-export default BetSLip;
+export default BetSlip;
