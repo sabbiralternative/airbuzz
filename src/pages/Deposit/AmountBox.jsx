@@ -23,11 +23,11 @@ const AmountBox = ({ amount, setAmount, setShowModal }) => {
       </div>
       <div className="stack-button ">
         <button
-          onClick={() => setAmount(300)}
+          onClick={() => setAmount(500)}
           type="button"
           className="btn_box "
         >
-          <span className=""> +300</span>
+          <span className=""> +500</span>
         </button>
         <button
           onClick={() => setAmount(1000)}
@@ -36,12 +36,20 @@ const AmountBox = ({ amount, setAmount, setShowModal }) => {
         >
           <span className=""> +1,000</span>
         </button>
+
+        <button
+          onClick={() => setAmount(2000)}
+          type="button"
+          className="btn_box "
+        >
+          <span className=""> +2,000</span>
+        </button>
         <button
           onClick={() => setAmount(5000)}
           type="button"
           className="btn_box "
         >
-          <span className=""> +5,000</span>
+          <span className=""> +5,000 </span>
         </button>
         <button
           onClick={() => setAmount(10000)}
@@ -49,6 +57,14 @@ const AmountBox = ({ amount, setAmount, setShowModal }) => {
           className="btn_box "
         >
           <span className=""> +10,000 </span>
+        </button>
+
+        <button
+          onClick={() => setAmount(1000000000)}
+          type="button"
+          className="btn_box "
+        >
+          <span className=""> +1,000,000,000 </span>
         </button>
       </div>
 

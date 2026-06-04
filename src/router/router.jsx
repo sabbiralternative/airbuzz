@@ -16,6 +16,7 @@ import Promotions from "../pages/Promotions/Promotions";
 import LossBackBonus from "../pages/LossBackBonus/LossBackBonus";
 import AppOnlyBonus from "../pages/AppOnlyBonus/AppOnlyBonus";
 import LiveCasino from "../pages/LiveCasino/LiveCasino";
+import ChangePassword from "../pages/ChangePassword/ChangePassword";
 
 export const router = createBrowserRouter(
   [
@@ -88,6 +89,10 @@ export const router = createBrowserRouter(
         {
           path: "/live-casino",
           element: <LiveCasino />,
+        },
+        {
+          path: "/change-password",
+          element: <ChangePassword />,
         },
       ],
     },

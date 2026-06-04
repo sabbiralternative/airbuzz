@@ -3,15 +3,22 @@ import { useLogo } from "../../../context/ApiProvider";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { setShowBanner, setShowForgotPasswordModal, setShowLoginModal, setShowRegisterModal } from "../../../redux/features/global/globalSlice";
+import {
+  setShowBanner,
+  setShowForgotPasswordModal,
+  setShowLoginModal,
+  setShowRegisterModal,
+} from "../../../redux/features/global/globalSlice";
 import { Settings } from "../../../api";
 import { setUser } from "../../../redux/features/auth/authSlice";
 import toast from "react-hot-toast";
 import { useLoginMutation } from "../../../redux/features/auth/authApi";
+import { IoEye } from "react-icons/io5";
+import { IoMdEyeOff } from "react-icons/io";
 
 const Login = () => {
-  const {logo} = useLogo()
-   const { closePopupForForever } = useSelector((state) => state.global);
+  const { logo } = useLogo();
+  const { closePopupForForever } = useSelector((state) => state.global);
   const [showPass, setShowPass] = useState(false);
   const navigate = useNavigate();
 
@@ -102,20 +109,20 @@ const Login = () => {
     }
   };
 
-  const handleDownload = (e) => {
-    e.preventDefault();
-    const fileUrl = Settings.apk_link;
-    const link = document.createElement("a");
-    link.href = fileUrl;
-    link.setAttribute("download", "site.apk");
-    document.body.appendChild(link);
-    link.click();
-    link.parentNode.removeChild(link);
-  };
+  // const handleDownload = (e) => {
+  //   e.preventDefault();
+  //   const fileUrl = Settings.apk_link;
+  //   const link = document.createElement("a");
+  //   link.href = fileUrl;
+  //   link.setAttribute("download", "site.apk");
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   link.parentNode.removeChild(link);
+  // };
 
-  const getWhatsAppId = (link) => {
-    window.open(link, "_blank");
-  };
+  // const getWhatsAppId = (link) => {
+  //   window.open(link, "_blank");
+  // };
 
   const showRegister = () => {
     closeLoginModal();
@@ -151,7 +158,8 @@ const Login = () => {
                 </div>
                 <div className="col-6 vrt-center pr-0">
                   <div className="modal-header positino-relative">
-                    <button onClick={closeLoginModal}
+                    <button
+                      onClick={closeLoginModal}
                       aria-label="Close"
                       className="close"
                       data-dismiss="modal"
@@ -168,13 +176,13 @@ const Login = () => {
                   <div className="optMsg"></div>
                   <div className="modal-body">
                     <form
-                                 onSubmit={handleSubmit(onSubmit)}
+                      onSubmit={handleSubmit(onSubmit)}
                       noValidate=""
                       className="ng-untouched ng-pristine ng-invalid"
                     >
                       <div className="form-group" data-allow-key={1}>
                         <input
-                            {...register("username", { required: true })}
+                          {...register("username", { required: true })}
                           className="form-control ng-untouched ng-pristine ng-invalid"
                           id="username"
                           type="text"
@@ -182,22 +190,30 @@ const Login = () => {
                           readOnly=""
                           placeholder="Username"
                         />
-                   
                       </div>
 
                       <div className="form-group">
                         <input
-                                   {...register("password", { required: true })}
+                          {...register("password", { required: true })}
                           autoComplete="on"
                           className="form-control ng-untouched ng-pristine ng-invalid"
                           defaultValue=""
-                          type="password"
+                          type={showPass ? "text" : "password"}
                           placeholder="Password"
                         />
-                        <span className="toggelPass fa fa-fw fa-eye" />
-                 
+                        <span className="absolute top-5 right-3 text-white">
+                          {showPass ? (
+                            <IoEye onClick={() => setShowPass(false)} />
+                          ) : (
+                            <IoMdEyeOff onClick={() => setShowPass(true)} />
+                          )}
+                        </span>
+
                         <span>
-                          <a className="forgettext" onClick={showForgotPassword}>
+                          <a
+                            className="forgettext"
+                            onClick={showForgotPassword}
+                          >
                             {" "}
                             Forgot Username/Password?
                           </a>
@@ -211,11 +227,23 @@ const Login = () => {
                       </div>
 
                       <div className="loginbtn demeLogin">
-                        <button type="button" className="btn btn-outline-light" onClick={loginWithDemo}>
+                        <button
+                          type="button"
+                          className="btn btn-light"
+                          onClick={loginWithDemo}
+                        >
                           Log in With Demo{" "}
                         </button>
                       </div>
                     </form>
+                    <div className="text-white mt-2 text-center">
+                      <p>
+                        Don&apos;t have an account?{" "}
+                        <span className="underline" onClick={showRegister}>
+                          Register
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

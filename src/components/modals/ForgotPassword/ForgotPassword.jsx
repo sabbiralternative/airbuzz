@@ -2,32 +2,29 @@ import { useEffect, useRef, useState } from "react";
 import { useLogo } from "../../../context/ApiProvider";
 import { useDispatch } from "react-redux";
 import {
+  useForgotPasswordMutation,
   useGetOtpMutation,
-  useRegisterMutation,
 } from "../../../redux/features/auth/authApi";
 import { useForm } from "react-hook-form";
 import {
-  setShowBanner,
+  setShowForgotPasswordModal,
   setShowLoginModal,
   setShowRegisterModal,
 } from "../../../redux/features/global/globalSlice";
 import toast from "react-hot-toast";
 import { Settings } from "../../../api";
-import { setUser } from "../../../redux/features/auth/authSlice";
 import useCloseModalClickOutside from "../../../hooks/closeModal";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoEye } from "react-icons/io5";
 
-const Register = () => {
-  const affnook_token = localStorage.getItem("affnook_token");
+const ForgotPassword = () => {
   const ref = useRef();
-  const referralCode = localStorage.getItem("referralCode");
   const { logo } = useLogo();
+  const [timer, setTimer] = useState(null);
   const dispatch = useDispatch();
   const [getOTP] = useGetOtpMutation();
-  const [handleRegister] = useRegisterMutation();
+  const [handleForgotPassword] = useForgotPasswordMutation();
   const { register, handleSubmit } = useForm();
-  const [timer, setTimer] = useState(null);
   const [order, setOrder] = useState({
     orderId: null,
     otpMethod: null,
@@ -37,7 +34,7 @@ const Register = () => {
   const [mobile, setMobile] = useState("");
 
   const closeModal = () => {
-    dispatch(setShowRegisterModal(false));
+    dispatch(setShowForgotPasswordModal(false));
   };
 
   useCloseModalClickOutside(ref, () => dispatch(setShowRegisterModal(false)));
@@ -57,49 +54,24 @@ const Register = () => {
   };
 
   const onSubmit = async (data) => {
-    const registerData = {
-      username: "",
+    const forgotPasswordData = {
+      username: mobile,
       password: data?.password,
       confirmPassword: data?.confirmPassword,
-      mobile: mobile,
       otp: data?.otp,
       isOtpAvailable: Settings.otp,
-      referralCode: referralCode || data?.referralCode,
       orderId: order.orderId,
       otpMethod: order.otpMethod,
-      affnook_token: affnook_token || null,
     };
 
-    const result = await handleRegister(registerData).unwrap();
+    const result = await handleForgotPassword(forgotPasswordData).unwrap();
 
     if (result.success) {
-      if (window?.fbq) {
-        window.fbq("track", "CompleteRegistration", {
-          content_name: "User Signup",
-          status: "success",
-        });
-      }
-      localStorage.removeItem("referralCode");
-      const token = result?.result?.token;
-      const bonusToken = result?.result?.bonusToken;
-      const user = result?.result?.loginName;
-      const memberId = result?.result?.memberId;
-      const game = result?.result?.buttonValue?.game;
-      const banner = result?.result?.banner;
-      dispatch(setUser({ user, token, memberId }));
-      localStorage.setItem("buttonValue", JSON.stringify(game));
-      localStorage.setItem("bonusToken", bonusToken);
-      localStorage.setItem("token", token);
-      if (banner) {
-        localStorage.setItem("banner", banner);
-        dispatch(setShowBanner(true));
-      }
-      if (token && user) {
-        dispatch(setShowRegisterModal(false));
-        toast.success("Register successful");
-      }
+      toast.success("Password updated successfully");
+      closeForgotPasswordModal();
+      dispatch(setShowLoginModal(true));
     } else {
-      toast.error(result?.error?.description);
+      toast.error(result?.error?.loginName?.[0]?.description);
     }
   };
 
@@ -107,6 +79,9 @@ const Register = () => {
     if (e.target.value.length <= 10) {
       setMobile(e.target.value);
     }
+  };
+  const closeForgotPasswordModal = () => {
+    dispatch(setShowForgotPasswordModal(false));
   };
 
   useEffect(() => {
@@ -122,11 +97,6 @@ const Register = () => {
     }
     return () => clearInterval(interval);
   }, [timer]);
-
-  const showLogin = () => {
-    closeModal();
-    dispatch(setShowLoginModal(true));
-  };
   return (
     <div
       aria-labelledby="admin-add-user"
@@ -251,53 +221,12 @@ const Register = () => {
                       </div>
                     </div>
 
-                    <div className="col-12 p-0">
-                      <div className="form-group relative">
-                        <input
-                          type="text"
-                          readOnly={referralCode}
-                          {...register("referralCode")}
-                          autoComplete="off"
-                          className="form-control ng-untouched ng-pristine ng-invalid"
-                          defaultValue={referralCode}
-                          placeholder="Enter referral code(Optional)"
-                        />
-                      </div>
-                    </div>
-
                     <div className="col-12 p-0 text-center">
-                      <p className="ptext">
-                        By clicking the Sign up button, you confirm that you
-                        have attained the age of majority in your country of
-                        residence and accept the Terms of Airbuzz.{" "}
-                      </p>
                       <div className="loginbtn mt-2 mb-0">
                         <button type="submit" className="btn-lg btn btn-light">
-                          Sign Up
+                          Change Password
                         </button>
                       </div>
-
-                      <div className="text-white mt-2">
-                        <p>
-                          Already have an account?{" "}
-                          <span className="underline" onClick={showLogin}>
-                            Login
-                          </span>
-                        </p>
-                      </div>
-
-                      {/* <div className="whatsappCol">
-                        <span className="or-text">OR</span>
-                        <a
-                          className="whatsappBtn"
-                          target="_blank"
-                          title="whatsapp"
-                          href="https://wa.me/+917290886245?text=Hi, I want to signup on Airbuzz."
-                        >
-                          <i className="fa fa-whatsapp" />
-                          <span>WHATSAPP FOR YOUR ID</span>
-                        </a>
-                      </div> */}
                     </div>
                   </div>
                 </form>
@@ -310,4 +239,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default ForgotPassword;
