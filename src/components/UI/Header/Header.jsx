@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Settings } from "../../../api";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AppPopup from "./AppPopUp";
 import { Fragment, useEffect, useState } from "react";
 import {
@@ -14,6 +14,7 @@ import DownloadAPK from "../../modals/DownloadAPK/DownloadAPK";
 import BuildVersion from "../../modals/BuildVersion/BuildVersion";
 import Unauthorized from "./Unauthorized";
 import Authorized from "./Authorized";
+import { latestEvent } from "../../../static/latest-event";
 
 const Header = () => {
   const stored_build_version = localStorage.getItem("build_version");
@@ -95,6 +96,18 @@ const Header = () => {
               <div className="col-6">
                 <div className="headgameNav">
                   <ul>
+                    {latestEvent?.map((item) => {
+                      return (
+                        <li key={item.eventName}>
+                          <Link to={item.pathname}>
+                            <span className="gmIcon blink-animate">
+                              <img src="/assets/cricket.svg" />
+                            </span>
+                            <span className="gmText">{item.eventName}</span>
+                          </Link>
+                        </li>
+                      );
+                    })}
                     <li>
                       <a>
                         <span className="gmIcon blink-animate">
