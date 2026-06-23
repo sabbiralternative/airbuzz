@@ -2,8 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import useBalance from "../../../hooks/balance";
 import { logout } from "../../../redux/features/auth/authSlice";
+import { useLanguage } from "../../../context/LanguageProvider";
+import { LanguageKey } from "../../../const";
+import { languageValue } from "../../../utils/language";
 
 const Dropdown = ({ showDropdown, setShowDropdown }) => {
+  const { valueByLanguage } = useLanguage();
   const dispatch = useDispatch();
   const { data } = useBalance();
   const navigate = useNavigate();
@@ -36,13 +40,13 @@ const Dropdown = ({ showDropdown, setShowDropdown }) => {
           className="btn btnDeposit"
           onClick={() => handleNavigate("/deposit")}
         >
-          DEPOSIT
+          {languageValue(valueByLanguage, LanguageKey.DEPOSIT)}
         </button>
         <button
           className="btn btnWithdrow"
           onClick={() => handleNavigate("/withdraw")}
         >
-          WITHDRAW
+          {languageValue(valueByLanguage, LanguageKey.WITHDRAW)}
         </button>
       </div>
       <ul className="accountDetail">
@@ -74,12 +78,12 @@ const Dropdown = ({ showDropdown, setShowDropdown }) => {
 
         <li onClick={() => handleNavigate("/my-bank-details")}>
           {" "}
-          My Bank Details
+          {languageValue(valueByLanguage, LanguageKey.MY_BANK_DETAILS)}
         </li>
 
         <li onClick={() => handleNavigate("/bonus-statement")}>
           {" "}
-          Bonus Statement{" "}
+          {languageValue(valueByLanguage, LanguageKey.BONUS_STATEMENT)}
         </li>
 
         <li onClick={() => handleNavigate("/affiliate")}> Affiliate </li>
@@ -100,7 +104,7 @@ const Dropdown = ({ showDropdown, setShowDropdown }) => {
         </li>
 
         <li onClick={() => dispatch(logout())} className="logoutBtn">
-          Logout
+          {languageValue(valueByLanguage, LanguageKey.LOGOUT)}
         </li>
       </ul>
     </div>

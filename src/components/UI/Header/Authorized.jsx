@@ -3,8 +3,14 @@ import useBalance from "../../../hooks/balance";
 import Dropdown from "./Dropdown";
 import { useRef, useState } from "react";
 import useCloseModalClickOutside from "../../../hooks/closeModal";
+import { useLanguage } from "../../../context/LanguageProvider";
+import Language from "../../modals/Language";
+import images from "../../../assets/images";
+import { Settings } from "../../../api";
 
 const Authorized = () => {
+  const { language } = useLanguage();
+  const [showLanguage, setShowLanguage] = useState(false);
   const ref = useRef();
   const [showDropdown, setShowDropdown] = useState(false);
   const { data } = useBalance();
@@ -89,6 +95,50 @@ const Authorized = () => {
           showDropdown={showDropdown}
           setShowDropdown={setShowDropdown}
         />
+      </div>
+      <div
+        className="btn btn-sm btn-outline-light"
+        style={{
+          position: "relative",
+          padding: "1px 4px",
+          background: "transparent",
+          marginLeft: "10px",
+        }}
+      >
+        {Settings.language && (
+          <button onClick={() => setShowLanguage((prev) => !prev)}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "end",
+                background: "transparent",
+                border: "none",
+              }}
+            >
+              <img
+                style={{
+                  height: "20px",
+                  width: "20px",
+                }}
+                src={images.globe}
+                alt=""
+              />
+              <b
+                style={{
+                  margin: "0px",
+                  fontSize: "10px",
+                  textTransform: "capitalize",
+                  color: "white",
+                }}
+              >
+                {language || "EN"}
+              </b>
+            </div>
+          </button>
+        )}
+        {showLanguage && <Language setShowLanguage={setShowLanguage} />}
       </div>
     </div>
   );

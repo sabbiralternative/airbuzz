@@ -1,7 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import { useLogo } from "../../../context/ApiProvider";
+import { useLanguage } from "../../../context/LanguageProvider";
+import { languageValue } from "../../../utils/language";
+import { LanguageKey } from "../../../const";
 
 const LeftSidebar = () => {
+  const { valueByLanguage } = useLanguage();
   const { pathname } = useLocation();
   const { logo } = useLogo();
 
@@ -21,7 +25,9 @@ const LeftSidebar = () => {
             <li className="sideNav">
               <span>
                 <Link className={`sideLink ${getActiveClass("/")}`} to="/">
-                  <span className="text-limit">Home</span>
+                  <span className="text-limit">
+                    {languageValue(valueByLanguage, LanguageKey.HOME)}
+                  </span>
                   <svg
                     className="svgIcon"
                     id="Layer_2"
@@ -520,7 +526,9 @@ const LeftSidebar = () => {
                         </svg>
                       </span>
                       <span data-toggle="tooltip" title="Cricket">
-                        <span className="text-limit">Cricket</span>
+                        <span className="text-limit">
+                          {languageValue(valueByLanguage, LanguageKey.CRICKET)}
+                        </span>
                         <sup>(100)</sup>
                       </span>
                     </Link>
@@ -569,7 +577,9 @@ const LeftSidebar = () => {
                         </svg>
                       </span>
                       <span data-toggle="tooltip" title="Soccer">
-                        <span className="text-limit">Soccer</span>
+                        <span className="text-limit">
+                          {languageValue(valueByLanguage, LanguageKey.FOOTBALL)}
+                        </span>
                         <sup>(227)</sup>
                       </span>
                     </a>
@@ -601,7 +611,9 @@ const LeftSidebar = () => {
                         </svg>
                       </span>
                       <span data-toggle="tooltip" title="Tennis">
-                        <span className="text-limit">Tennis</span>
+                        <span className="text-limit">
+                          {languageValue(valueByLanguage, LanguageKey.TENNIS)}
+                        </span>
                         <sup>(37)</sup>
                       </span>
                     </a>

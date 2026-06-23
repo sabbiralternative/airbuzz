@@ -151,6 +151,7 @@ const Header = () => {
                   </ul>
                 </div>
               </div>
+
               {!token && <Unauthorized />}
               {token && <Authorized />}
             </div>
